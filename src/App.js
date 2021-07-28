@@ -1,23 +1,33 @@
 import logo from './logo.svg';
+
+import React from 'react';
+
+import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
+
+//import background image
+//import blueCarbon from './backgrounds/blueCarbon.png';
+//import components
+
+
+
+
+
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter>
+       <div className="header">
+         <NavLink exact activeClassName="active" to="/" ><h1>Shopping Game</h1></NavLink>
+
+         <div className="game-container">
+           <h1>Game container</h1>
+
+         </div>
+       </div>
+       </BrowserRouter>
     </div>
   );
 }
