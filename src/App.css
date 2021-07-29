@@ -35,4 +35,23 @@
   width: 70%;
   height: 800px;
   margin-left: 15%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 5px;
+
 }
+
+.busket{
+  background-color: rgba(0, 0, 0, 0.623);
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  border-radius: 5px;
+  
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.busket img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
