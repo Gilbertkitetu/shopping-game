@@ -8,7 +8,7 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 //import blueCarbon from './backgrounds/blueCarbon.png';
 import busket from './images/basket/shoppingbag.png';
 //import components
-
+import Busket from './components/busket';
 
 
 
@@ -26,9 +26,15 @@ function App() {
          <div className="game-container">
            
 
-           <div className="busket">
-            
+           <div className="busket-container" >
+
+            <div className="busket-image">
              <img src={busket} alt="busket" />
+             </div>
+
+             <div className="busket-items">
+             <Busket />
+             </div>
            </div>
 
          </div>

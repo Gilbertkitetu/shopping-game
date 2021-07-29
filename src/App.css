@@ -9,9 +9,10 @@
   color: #fff;
   text-align: center;
   text-decoration: none;
+  outline: none;
 
   width: 22ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation: typing 10s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -40,18 +41,35 @@
 
 }
 
-.busket{
+.busket-container{
   background-color: rgba(0, 0, 0, 0.623);
+  /* background-image: url('./images/basket/shoppingbag.png'); */
   width: 70%;
   height: 70%;
   margin: 0 auto;
   border-radius: 5px;
+  position: relative;
+  
   
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.busket img {
+.busket-container .busket-image img{
   width: 70%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.busket-items{
+  background-color: rgba(0, 0, 0, 0.61);
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  z-index: 10;
+  margin: 20px;
+  position: absolute;
 }
 
