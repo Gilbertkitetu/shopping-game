@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/busket.css';
 //imports
-import BusketBox from './busketBox';
+// import BusketBox from './busketBox';
 
 function Busket (){
 

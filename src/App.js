@@ -9,6 +9,7 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import busket from './images/basket/shoppingbag.png';
 //import components
 import Busket from './components/busket';
+import ShowItems from './components/show-tems';
 
 
 
@@ -24,16 +25,18 @@ function App() {
          <NavLink exact activeClassName="active" to="/" ><h1>Shopping Game</h1></NavLink>
 
          <div className="game-container">
-           
+           <div className="show-items">
+             <ShowItems />
+           </div>
 
            <div className="busket-container" >
 
             <div className="busket-image">
-             <img src={busket} alt="busket" />
+                 <img src={busket} alt="busket" />
              </div>
 
              <div className="busket-items">
-             <Busket />
+                 <Busket />
              </div>
            </div>
 
