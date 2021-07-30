@@ -25,9 +25,17 @@ function App() {
          <NavLink exact activeClassName="active" to="/" ><h1>Shopping Game</h1></NavLink>
 
          <div className="game-container">
-           <div className="show-items">
+
+           <div className="box a"></div>
+
+           <div className="box b"></div>
+
+
+           <div className="show-items-left">
              <ShowItems />
+          
            </div>
+
 
            <div className="busket-container" >
 
@@ -39,6 +47,16 @@ function App() {
                  <Busket />
              </div>
            </div>
+
+
+           <div className="show-items-right">
+           <ShowItems />
+           </div>
+
+           <div className="show-items-left-bottom">
+           <ShowItems />
+           </div>
+
 
          </div>
        </div>
