@@ -30,30 +30,32 @@ function App() {
 
            <div className="box b"></div>
 
+           <div className="box c"></div>
 
-           <div className="show-items-left">
+
+           <div className="box show-items-left">
              <ShowItems />
           
            </div>
 
 
-           <div className="busket-container" >
+           <div className="box busket-container" >
 
-            <div className="busket-image">
+            {/* <div className="box busket-image">
                  <img src={busket} alt="busket" />
              </div>
 
-             <div className="busket-items">
+             <div className="box busket-items">
                  <Busket />
-             </div>
+             </div> */}
            </div>
 
 
-           <div className="show-items-right">
+           <div className="box show-items-right">
            <ShowItems />
            </div>
 
-           <div className="show-items-left-bottom">
+           <div className="box show-items-left-bottom">
            <ShowItems />
            </div>
 
