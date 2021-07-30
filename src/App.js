@@ -22,13 +22,15 @@ function App() {
     <div className="App">
        <BrowserRouter>
        <div className="header">
-         <NavLink exact activeClassName="active" to="/" ><h1>Shopping Game</h1></NavLink>
+        
 
          <div className="game-container">
 
            <div className="box a"></div>
 
-           <div className="box b"></div>
+           <div className="box b">
+             <h1>Shopping Game</h1>
+           </div>
 
            <div className="box c"></div>
 
@@ -41,13 +43,13 @@ function App() {
 
            <div className="box busket-container" >
 
-            {/* <div className="box busket-image">
+            <div className="box busket-image">
                  <img src={busket} alt="busket" />
              </div>
 
              <div className="box busket-items">
                  <Busket />
-             </div> */}
+             </div>
            </div>
 
 
@@ -55,9 +57,11 @@ function App() {
            <ShowItems />
            </div>
 
-           <div className="box show-items-left-bottom">
+           <div className="box show-items-bottom">
            <ShowItems />
            </div>
+
+           <div className="box d"></div>
 
 
          </div>

@@ -39,7 +39,7 @@
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, [col] 300px);
+  grid-template-columns: repeat(auto-fill, [col] 350px);
   grid-template-rows: repeat(auto-fill, [row] auto  );
   grid-gap: 5px;
  
@@ -119,7 +119,12 @@
 
 
 .show-items-bottom{
-  grid-column: col / span 4;
+  grid-column: col / span 3;
     grid-row: row 3;
     
+}
+
+.d {
+  grid-column: col 4;
+  grid-row: row 3;
 }
