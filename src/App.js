@@ -41,13 +41,13 @@ function App() {
            </div>
 
 
-           <div className="box busket-container" >
+           <div className=" busket-container" >
 
-            <div className="box busket-image">
+            <div className=" busket-image">
                  <img src={busket} alt="busket" />
              </div>
 
-             <div className="box busket-items">
+             <div className=" busket-items">
                  <Busket />
              </div>
            </div>

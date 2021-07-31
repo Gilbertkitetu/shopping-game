@@ -71,8 +71,8 @@
 .busket-container{
   background-color: rgba(0, 0, 0, 0.623);
   /* background-image: url('./images/basket/shoppingbag.png'); */
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   border-radius: 5px;
   position: relative;
@@ -85,22 +85,30 @@
 }
 .busket-container .busket-image img{
   width: 70%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  grid-column: col 2 /span 2;
+  grid-row: row 2 ;
 }
 
 .busket-items{
-  background-color: rgba(0, 0, 0, 0.61);
-  width: 70%;
-  height: 70%;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   z-index: 10;
-  margin: 20px;
+  opacity: 0.5;
+  
   position: absolute;
+
+
+  grid-column: col 2 /span 2;
+  grid-row: row 2 ;
 }
 
 
