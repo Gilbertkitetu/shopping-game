@@ -31,6 +31,11 @@ function App() {
 
   const arr = ['a','b','c','d','e','f','g','h','i','j'];
 
+  //the busket images
+  
+
+
+
   //buttom boxes image values
   const bottomItems = [];
   for (let i = 0; i < 9; i++){
@@ -86,7 +91,7 @@ for(let i = 16; i < 21; i++){
              </div>
 
              <div className=" busket-items">
-                 <Busket />
+                 <Busket listOfItems= {listOfItems}/>
              </div>
            </div>
 

@@ -4,10 +4,30 @@ import './styles/busket.css';
 //imports
 // import BusketBox from './busketBox';
 
-function Busket (){
+function Busket (props){
 
-  const numberOfBoxes = [1,2,3,4,5,6,7,8,9,10,11,12];
-  const arrayOfBoxes = numberOfBoxes.map((box) => 
+  //const numberOfBoxes = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+  function randomArrayShuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+
+  const listOfAllItems = props.listOfItems;
+
+  const itemsInTheBusket = randomArrayShuffle(listOfAllItems);
+  itemsInTheBusket.length = Math.min(itemsInTheBusket.length, 12);
+  console.log(`items in the busket ${itemsInTheBusket}`);
+
+  const arrayOfBoxes = itemsInTheBusket.map((box) => 
   <li className="busket-item">{box}</li>
   );
 
