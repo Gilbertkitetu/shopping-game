@@ -22,7 +22,7 @@ const fruits = [
     {id: 17, src : '../images/fruits/i17.jpg'},
     {id: 18, src : '../images/fruits/i18.jpg'},
     {id: 19, src : '../images/fruits/i19.jpg'},
-    {id: 20, src : '../images/fruits/i20.jpg'},
+    {id: 20, src : '../images/fruits/i20.jpg'}
 
 ];
 

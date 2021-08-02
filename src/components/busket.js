@@ -25,10 +25,11 @@ function Busket (props){
 
   const itemsInTheBusket = randomArrayShuffle(listOfAllItems);
   itemsInTheBusket.length = Math.min(itemsInTheBusket.length, 12);
-  console.log(`items in the busket ${itemsInTheBusket}`);
+  console.log(`items in the busket ${itemsInTheBusket[1].src}`);
 
   const arrayOfBoxes = itemsInTheBusket.map((box) => 
-  <li className="busket-item"><img src={box}/></li>
+  <li className="busket-item"><img src={box.src} alt={box.id}/></li>
+  
   );
 
 

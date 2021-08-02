@@ -48,11 +48,9 @@ function App() {
 //loading images to array listOfItems
   let listOfItems = [];
 for (let i = 0; i <= 19; i++){
-listOfItems.push(fruits[i].src);
+listOfItems.push(fruits[i]);
 }
 
-console.log(fruits[0].image);
-console.log(listOfItems);
 
 
 
