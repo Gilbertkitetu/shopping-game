@@ -5,12 +5,13 @@ function ShowItemsLeft (props){
     const arr = props.leftItems;
 
     const arrayOfLeftItems = arr.map((item) => 
-    <li className="item">{item}</li>
+    <li className="item"><img src={item}></img></li>
     );
  
 
     return (
-        <ul>{arrayOfLeftItems}</ul>
+        <ul>{arrayOfLeftItems} </ul>
+        
         );
 }
 

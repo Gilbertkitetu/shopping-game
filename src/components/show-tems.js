@@ -12,7 +12,7 @@ const arr = props.buttomItem;
 
 
 const arrayOfItemsBotttom = arr.map((item) => 
-   <li className="item">{item}</li>
+   <img className="item" src={item} />
    );
     return(
          <ul>{arrayOfItemsBotttom}   </ul>

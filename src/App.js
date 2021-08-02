@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 
+
+
+
 import React from 'react';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
@@ -9,12 +12,18 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import busket from './images/basket/shoppingbag.png';
 
 
+
 //import components
 import Busket from './components/busket';
 import ShowItems from './components/show-tems';
 import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
 import CountDownTimer from './components/countDownTimer';
+import fruits from './components/fruit-images';
+
+
+
+
 
 
 
@@ -31,11 +40,23 @@ function App() {
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
 
 
-
+  
 //main array with supplies to all boxes
-  let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+  //let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+ //let listOfItems = fruits;
 
-  const arr = ['a','b','c','d','e','f','g','h','i','j'];
+//loading images to array listOfItems
+  let listOfItems = [];
+for (let i = 0; i <= 19; i++){
+listOfItems.push(fruits[i].src);
+}
+
+console.log(fruits[0].image);
+console.log(listOfItems);
+
+
+
+  //const arr = ['a','b','c','d','e','f','g','h','i','j'];
 
   //the busket images
 

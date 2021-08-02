@@ -28,7 +28,7 @@ function Busket (props){
   console.log(`items in the busket ${itemsInTheBusket}`);
 
   const arrayOfBoxes = itemsInTheBusket.map((box) => 
-  <li className="busket-item">{box}</li>
+  <li className="busket-item"><img src={box}/></li>
   );
 
 
