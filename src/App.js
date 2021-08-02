@@ -7,9 +7,12 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 //import background image
 //import blueCarbon from './backgrounds/blueCarbon.png';
 import busket from './images/basket/shoppingbag.png';
+
+
 //import components
 import Busket from './components/busket';
 import ShowItems from './components/show-tems';
+import ShowItemsRight from './components/showItemsRight';
 
 
 
@@ -17,7 +20,25 @@ import ShowItems from './components/show-tems';
 
 import './App.css';
 
-function App() {
+function App(props) {
+
+
+  const listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+  const bottomItems = [];
+  for (let i = 0; i < 9; i++){
+    //console.log(listOfItems[i]);
+    bottomItems.push(listOfItems[i]);
+  }
+
+
+  console.log(bottomItems);
+
+
+
+ 
+
+
   return (
     <div className="App">
        <BrowserRouter>
@@ -36,7 +57,7 @@ function App() {
 
 
            <div className="box show-items-left">
-             <ShowItems />
+             
           
            </div>
 
@@ -54,11 +75,11 @@ function App() {
 
 
            <div className="box show-items-right">
-           <ShowItems />
+           {/* <ShowItemsRight bottomItems = {bottomItems}/> */}
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems />
+           <ShowItems buttomItem = "bottomItems"/>
            </div>
 
            <div className="box d"></div>
