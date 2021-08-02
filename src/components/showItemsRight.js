@@ -4,17 +4,17 @@ import ShowItems from './show-tems';
 
 function ShowItemsRight (props){
 
-    const a = props.bottomItems;
-    console.log(`bottom item ${a}`);
+    const arr = props.rightItems;
+    
 
-//     const arrayOfItemsRight = a.map((item) => 
-//   <li className="item">{item}</li>
-//   );
+     const arrayOfItemsRight = arr.map((item) => 
+   <li className="item">{item}</li>
+   );
 
 
     return (
-        // <ul>{arrayOfItemsRight}</ul>
-        <h1>right</h1>
+         <ul>{arrayOfItemsRight}</ul>
+        
         );
 }
 

@@ -13,6 +13,7 @@ import busket from './images/basket/shoppingbag.png';
 import Busket from './components/busket';
 import ShowItems from './components/show-tems';
 import ShowItemsRight from './components/showItemsRight';
+import ShowItemsLeft from './components/showItemsLeft';
 
 
 
@@ -25,11 +26,12 @@ import './App.css';
 
 function App() {
 
-
+//main array with supplies to all boxes
   const listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
   const arr = ['a','b','c','d','e','f','g','h','i','j'];
 
+  //buttom boxes image values
   const bottomItems = [];
   for (let i = 0; i < 9; i++){
     //console.log(listOfItems[i]);
@@ -40,8 +42,18 @@ function App() {
   console.log(bottomItems);
 
 
+  //right boxes images value
+const rightItems = [];
+for (let i = 11; i < 15; i++){
+rightItems.push(listOfItems[i]);
+}
 
  
+//left boxes images values
+const leftItems = [];
+for(let i = 16; i < 21; i++){
+  leftItems.push(listOfItems[i]);
+}
 
 
   return (
@@ -62,7 +74,7 @@ function App() {
 
 
            <div className="box show-items-left">
-             
+             <ShowItemsLeft leftItems= {leftItems} />
           
            </div>
 
@@ -80,11 +92,11 @@ function App() {
 
 
            <div className="box show-items-right">
-           {/* <ShowItemsRight bottomItems = {bottomItems}/> */}
+           <ShowItemsRight rightItems = {rightItems}/>
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems buttomItem = {listOfItems}/>
+           <ShowItems buttomItem = {bottomItems}/>
            </div>
 
            <div className="box d"></div>

@@ -1,10 +1,16 @@
 import React from 'react';
 
-function ShowItemsLeft (){
+function ShowItemsLeft (props){
 
+    const arr = props.leftItems;
+
+    const arrayOfLeftItems = arr.map((item) => 
+    <li className="item">{item}</li>
+    );
+ 
 
     return (
-        <h1>Helo</h1>
+        <ul>{arrayOfLeftItems}</ul>
         );
 }
 
