@@ -27,18 +27,34 @@ import './App.css';
 function App() {
 
 //main array with supplies to all boxes
-  const listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+  let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
   const arr = ['a','b','c','d','e','f','g','h','i','j'];
 
   //the busket images
+
+  //randomize images array
+
+  function randomArrayShuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  listOfItems = randomArrayShuffle(listOfItems);
   
 
 
 
   //buttom boxes image values
   const bottomItems = [];
-  for (let i = 0; i < 9; i++){
+  for (let i = 0; i <= 9; i++){
     //console.log(listOfItems[i]);
     bottomItems.push(listOfItems[i]);
   }
@@ -49,14 +65,14 @@ function App() {
 
   //right boxes images value
 const rightItems = [];
-for (let i = 11; i < 15; i++){
+for (let i = 10; i <= 14; i++){
 rightItems.push(listOfItems[i]);
 }
 
  
 //left boxes images values
 const leftItems = [];
-for(let i = 16; i < 21; i++){
+for(let i = 15; i <= 19; i++){
   leftItems.push(listOfItems[i]);
 }
 
