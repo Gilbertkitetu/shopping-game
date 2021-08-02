@@ -20,10 +20,15 @@ import ShowItemsRight from './components/showItemsRight';
 
 import './App.css';
 
-function App(props) {
+
+
+
+function App() {
 
 
   const listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+  const arr = ['a','b','c','d','e','f','g','h','i','j'];
 
   const bottomItems = [];
   for (let i = 0; i < 9; i++){
@@ -79,7 +84,7 @@ function App(props) {
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems buttomItem = "bottomItems"/>
+           <ShowItems buttomItem = {listOfItems}/>
            </div>
 
            <div className="box d"></div>

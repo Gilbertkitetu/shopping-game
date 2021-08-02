@@ -7,18 +7,13 @@ import ShowItemsRight from './showItemsRight';
 import './styles/show-item.css';
 
 function ShowItems (props){
-   //const itemsButtom = props.bottomItems;
-  // const arrayOfItems = itemsRight.map((item) => 
-  // <li className="item">{item}</li>
-  // );
-  //console.log(`show items ${itemsButtom}`);
-
-
+console.log(props);
+const arr = props.buttomItem;
 
     return(
         // <ul>{arrayOfItems}   </ul>
-        <h1>show items{console.log(props.bottomItem)}</h1>
-       
+        <h1>show items.{console.log(`Array ${arr}`)}</h1>
+           
        
     );
 }
