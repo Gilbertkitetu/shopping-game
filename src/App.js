@@ -14,6 +14,7 @@ import Busket from './components/busket';
 import ShowItems from './components/show-tems';
 import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
+import CountDownTimer from './components/countDownTimer';
 
 
 
@@ -25,6 +26,11 @@ import './App.css';
 
 
 function App() {
+
+  //countDownTimer variables
+  const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
+
+
 
 //main array with supplies to all boxes
   let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
@@ -85,13 +91,17 @@ for(let i = 15; i <= 19; i++){
 
          <div className="game-container">
 
-           <div className="box a"></div>
+           <div className="box a">
+             <h2>Level : 1</h2>
+           </div>
 
            <div className="box b">
              <h1>Shopping Game</h1>
            </div>
 
-           <div className="box c"></div>
+           <div className="box c">
+             <h2><CountDownTimer hoursMinSecs={hoursMinSecs}/></h2>
+           </div>
 
 
            <div className="box show-items-left">
