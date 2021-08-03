@@ -47,7 +47,7 @@
 }
 
 .box {
-  background-color: rgb(10,61,145);
+  background-color: rgb(10,61,145, 0.8);
   color: #fff;
   border-radius: 5px;
   padding: 20px;

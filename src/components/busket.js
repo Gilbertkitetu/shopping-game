@@ -8,6 +8,10 @@ function Busket (props){
 
   //const numberOfBoxes = [1,2,3,4,5,6,7,8,9,10,11,12];
 
+
+console.log(`show items id ${props.id}`);
+console.log(props)
+
   function randomArrayShuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {

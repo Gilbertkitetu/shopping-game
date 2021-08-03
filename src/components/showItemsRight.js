@@ -8,7 +8,7 @@ function ShowItemsRight (props){
     
 
      const arrayOfItemsRight = arr.map((item) => 
-   <li className="item"><img src={item}/></li>
+   <li className="item"><img src={item.src} alt={item.id}/></li>
    );
 
 
