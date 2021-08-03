@@ -138,7 +138,7 @@ for(let i = 15; i <= 19; i++){
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft leftItems= {leftItems} bottomItems={bottomItems}/>
+             <ShowItemsLeft leftItems= {leftItems} busketItems={busketItems}/>
           
            </div>
 
@@ -156,7 +156,7 @@ for(let i = 15; i <= 19; i++){
 
 
            <div className="box show-items-right">
-           <ShowItemsRight rightItems = {rightItems}/>
+           <ShowItemsRight rightItems = {rightItems} busketItems={busketItems}/>
            </div>
 
            <div className="box show-items-bottom">

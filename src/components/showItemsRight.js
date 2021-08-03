@@ -5,10 +5,32 @@ import ShowItems from './show-tems';
 function ShowItemsRight (props){
 
   //function to search if item clicked is in the selected
+//busket items
+const busketItems = props.busketItems;
+console.log(`Buttom busketItems ${busketItems}`);
+
+const busketItemsArr = [];
+for(let i = 0; i <= 11; i++){
+  busketItemsArr.push(busketItems[i].id);
+  console.log(`show items busket items ${busketItems[i].id}`)
+}
+console.log(busketItemsArr);
+
+
+
+
+const include = (arr,obj) => {
+    return (arr.indexOf(obj) !== -1);
+}
 const handleClick = (id) => {
-  console.log(id);
-  }
-  
+
+    console.log(include(busketItemsArr, id));
+    
+console.log(id);
+
+}
+
+
     const arr = props.rightItems;
     
 

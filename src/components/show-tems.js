@@ -28,7 +28,7 @@ console.log(busketItemsArr);
 
 
 const include = (arr,obj) => {
-    return (arr.indexOf(obj) != -1);
+    return (arr.indexOf(obj) !== -1);
 }
 const handleClick = (id) => {
 
