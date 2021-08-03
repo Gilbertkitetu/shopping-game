@@ -1,11 +1,11 @@
 import React from 'react';
 //import i2 from '../images/fruits/i11.jpg';
 
-import ShowItemsLeft from './showItemsLeft';
-import ShowItemsRight from './showItemsRight';
-import fruits from './fruit-images';
+// import ShowItemsLeft from './showItemsLeft';
+// import ShowItemsRight from './showItemsRight';
+// import fruits from './fruit-images';
 
-import Busket from './busket';
+// import Busket from './busket';
 
 import './styles/show-item.css';
 
@@ -13,13 +13,33 @@ function ShowItems (props){
 console.log(props);
 const arr = props.buttomItem;
 
-//function to search if item clicked is in the selected
+//busket items
+const busketItems = props.busketItems;
+console.log(`Buttom busketItems ${busketItems}`);
+
+const busketItemsArr = [];
+for(let i = 0; i <= 11; i++){
+  busketItemsArr.push(busketItems[i].id);
+  console.log(`show items busket items ${busketItems[i].id}`)
+}
+console.log(busketItemsArr);
+
+
+
+
+const include = (arr,obj) => {
+    return (arr.indexOf(obj) != -1);
+}
 const handleClick = (id) => {
+
+    console.log(include(busketItemsArr, id));
+    
 console.log(id);
+
 }
 
 const arrayOfItemsBotttom = arr.map((item) => 
-   <li className="item"><img className="item" src={item.src} alt={item.id} onClick={()=> {handleClick(item.id)}}/></li>
+   <li className="item" onClick={()=> {handleClick(item.id)}}><img className="item" src={item.src} alt={item.id} /></li>
    );
     return(
          <ul>{arrayOfItemsBotttom}   </ul>

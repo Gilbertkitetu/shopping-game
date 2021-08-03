@@ -9,8 +9,8 @@ function Busket (props){
   //const numberOfBoxes = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 
-console.log(`show items id ${props.id}`);
-console.log(props)
+//console.log(`show items id ${props.id}`);
+//console.log(props)
 
   function randomArrayShuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -25,14 +25,16 @@ console.log(props)
   }
 
 
-  const listOfAllItems = props.listOfItems;
+  //const listOfAllItems = props.listOfItems;
 
-  const itemsInTheBusket = randomArrayShuffle(listOfAllItems);
-  itemsInTheBusket.length = Math.min(itemsInTheBusket.length, 12);
-  console.log(`items in the busket ${itemsInTheBusket[1].src}`);
+   const itemsInTheBusket = props.busketItems;
 
-  const arrayOfBoxes = itemsInTheBusket.map((box) => 
-  <li className="busket-item"><img src={box.src} alt={box.id}/></li>
+  //= randomArrayShuffle(listOfAllItems);
+  // itemsInTheBusket.length = Math.min(itemsInTheBusket.length, 12);
+  // console.log(`items in the busket ${itemsInTheBusket[1].src}`);
+
+  const arrayOfBoxes = itemsInTheBusket.map((item) => 
+  <li className="busket-item"><img src={item.src} alt={item.id}/></li>
   
   );
 

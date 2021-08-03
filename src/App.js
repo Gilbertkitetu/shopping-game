@@ -46,9 +46,9 @@ function App() {
  //let listOfItems = fruits;
 
 //loading images to array listOfItems
-  let listOfItems = [];
+  const listOfItems1 = [];
 for (let i = 0; i <= 19; i++){
-listOfItems.push(fruits[i]);
+listOfItems1.push(fruits[i]);
 }
 
 
@@ -72,9 +72,23 @@ listOfItems.push(fruits[i]);
     return array;
   }
 
-  listOfItems = randomArrayShuffle(listOfItems);
+
+  const listOfItems = randomArrayShuffle(listOfItems1);
   
 
+  //busket box image values
+
+  const busketItems1 = [];
+for (let i = 0; i <= 19; i++){
+busketItems1.push(fruits[i]);
+}
+
+const busketItems = randomArrayShuffle(busketItems1);
+
+
+  busketItems.length = Math.min(listOfItems.length, 12);
+
+  console.log(`busket items ${busketItems}`);
 
 
   //buttom boxes image values
@@ -85,7 +99,7 @@ listOfItems.push(fruits[i]);
   }
 
 
-  console.log(bottomItems);
+  console.log(`Bottom items ${bottomItems}`);
 
 
   //right boxes images value
@@ -124,7 +138,7 @@ for(let i = 15; i <= 19; i++){
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft leftItems= {leftItems} />
+             <ShowItemsLeft leftItems= {leftItems} bottomItems={bottomItems}/>
           
            </div>
 
@@ -136,7 +150,7 @@ for(let i = 15; i <= 19; i++){
              </div>
 
              <div className=" busket-items">
-                 <Busket listOfItems= {listOfItems}/>
+                 <Busket busketItems = {busketItems}/>
              </div>
            </div>
 
@@ -146,7 +160,7 @@ for(let i = 15; i <= 19; i++){
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems buttomItem = {bottomItems}/>
+           <ShowItems buttomItem = {bottomItems} busketItems={busketItems}/>
            </div>
 
            <div className="box d"></div>
