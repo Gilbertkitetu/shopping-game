@@ -25,6 +25,10 @@ const include = (arr,obj) => {
 const handleClick = (id) => {
 
     console.log(include(busketItemsArr, id));
+
+    var state = include(busketItemsArr, id);
+    props.parentCallback(state);
+
     
 console.log(id);
 

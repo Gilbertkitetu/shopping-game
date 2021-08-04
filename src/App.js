@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
@@ -39,7 +39,15 @@ function App() {
   //countDownTimer variables
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
 
+  //monitor clicked events
+  const [clickedImage, setClickedImage] = useState(false);
 
+  const handleClickedImage = (childData) => {
+    //childData.preventDefault();
+    setClickedImage(childData);
+    console.log(`data from child ${childData}`);
+  }
+  console.log(`child to parent ${clickedImage}`)
   
 //main array with supplies to all boxes
   //let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
@@ -138,7 +146,7 @@ for(let i = 15; i <= 19; i++){
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft leftItems= {leftItems} busketItems={busketItems}/>
+             <ShowItemsLeft leftItems= {leftItems} busketItems={busketItems} parentCallback={handleClickedImage}/>
           
            </div>
 
@@ -156,11 +164,11 @@ for(let i = 15; i <= 19; i++){
 
 
            <div className="box show-items-right">
-           <ShowItemsRight rightItems = {rightItems} busketItems={busketItems}/>
+           <ShowItemsRight rightItems = {rightItems} busketItems={busketItems} parentCallback={handleClickedImage}/>
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems buttomItem = {bottomItems} busketItems={busketItems}/>
+           <ShowItems buttomItem = {bottomItems} busketItems={busketItems} parentCallback={handleClickedImage}/>
            </div>
 
            <div className="box d"></div>

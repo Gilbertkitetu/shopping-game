@@ -6,8 +6,8 @@
 	vertical-align: top;
 	margin: 2px;
 	font-family: 'helvetica', san-serif;
-	background: #262a2b;
-	border: 1px solid #252727;
+	background: rgba(25,24,82, 0.5);
+	outline: none;
 	text-align: center;
     border-radius: 3px;
     cursor: pointer;

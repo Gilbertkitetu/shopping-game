@@ -8,6 +8,7 @@ import React from 'react';
 // import Busket from './busket';
 
 import './styles/show-item.css';
+import './styles/busket.css';
 
 function ShowItems (props){
 console.log(props);
@@ -31,15 +32,23 @@ const include = (arr,obj) => {
     return (arr.indexOf(obj) !== -1);
 }
 const handleClick = (id) => {
-
+    //id.preventDefault();
     console.log(include(busketItemsArr, id));
     
-console.log(id);
+    var state = include(busketItemsArr, id);
+    props.parentCallback(state);
+
+
+//console.log(id);
 
 }
+const handleSubmit = (event) => {
+    event.preventDefault();
+  }
+
 
 const arrayOfItemsBotttom = arr.map((item) => 
-   <li className="item" onClick={()=> {handleClick(item.id)}}><img className="item" src={item.src} alt={item.id} /></li>
+   <li className="item" onClick={()=> {handleClick(item.id)}}> <img className="item" src={item.src} alt={item.id} /></li>
    );
     return(
          <ul>{arrayOfItemsBotttom}   </ul>
