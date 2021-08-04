@@ -24,6 +24,10 @@ function Busket (props){
     return array;
   }
 
+  //true clicked image styling
+  console.log(`clicked image styling ${props.ClickedImage}`)
+
+
 
   //const listOfAllItems = props.listOfItems;
 

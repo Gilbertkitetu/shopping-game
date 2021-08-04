@@ -40,15 +40,22 @@ function App() {
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
 
   //monitor clicked events
-  const [clickedImage, setClickedImage] = useState(false);
+  //const [clickedImage, setClickedImage] = useState(false);
+var ClickedImage;
 
-  const handleClickedImage = (childData) => {
+  const handleClickedImage = (childData, ClickedImage) => {
     //childData.preventDefault();
-    setClickedImage(childData);
+    ClickedImage=childData;
     console.log(`data from child ${childData}`);
+    // busketState = childData;
+    return childData;
+
+    
   }
-  console.log(`child to parent ${clickedImage}`)
+  //console.log(`child to parent ${clickedImage}`)
   
+
+
 //main array with supplies to all boxes
   //let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
  //let listOfItems = fruits;
@@ -158,7 +165,7 @@ for(let i = 15; i <= 19; i++){
              </div>
 
              <div className=" busket-items">
-                 <Busket busketItems = {busketItems}/>
+                 <Busket busketItems = {busketItems} ClickedImage={ClickedImage}/>
              </div>
            </div>
 
