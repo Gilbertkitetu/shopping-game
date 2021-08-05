@@ -1,28 +1,48 @@
 import React from 'react';
 
+import i1 from '../images/fruits/i1.png';
+import i2 from '../images/fruits/i2.png';
+import i3 from '../images/fruits/i3.png';
+import i4 from '../images/fruits/i4.png';
+import i5 from '../images/fruits/i5.png';
+import i6 from '../images/fruits/i6.png';
+import i7 from '../images/fruits/i7.png';
+import i8 from '../images/fruits/i8.png';
+import i9 from '../images/fruits/i9.png';
+import i10 from '../images/fruits/i10.png';
+import i11 from '../images/fruits/i11.png';
+import i12 from '../images/fruits/i12.png';
+import i13 from '../images/fruits/i13.png';
+import i14 from '../images/fruits/i14.png';
+import i15 from '../images/fruits/i15.png';
+import i16 from '../images/fruits/i16.png';
+import i17 from '../images/fruits/i17.png';
+import i18 from '../images/fruits/i18.png';
+import i19 from '../images/fruits/i19.png';
+import i20 from '../images/fruits/i20.png';
 
 
 const fruits = [
-    {id: 1, src : '../images/fruits/i1.jpg'},
-    {id: 2, src : '../images/fruits/i2.jpg'},
-    {id: 3, src : '../images/fruits/i3.jpg'},
-    {id: 4, src : '../images/fruits/i4.jpg'},
-    {id: 5, src : '../images/fruits/i5.jpg'},
-    {id: 6, src : '../images/fruits/i6.jpg'},
-    {id: 7, src : '../images/fruits/i7.jpg'},
-    {id: 8, src : '../images/fruits/i8.jpg'},
-    {id: 9, src : '../images/fruits/i9.jpg'},
-    {id: 10, src : '../images/fruits/i10.jpg'},
-    {id: 11, src : '../images/fruits/i11.jpg'},
-    {id: 12, src : '../images/fruits/i12.jpg'},
-    {id: 13, src : '../images/fruits/i13.jpg'},
-    {id: 14, src : '../images/fruits/i14.jpg'},
-    {id: 15, src : '../images/fruits/i15.jpg'},
-    {id: 16, src : '../images/fruits/i16.jpg'},
-    {id: 17, src : '../images/fruits/i17.jpg'},
-    {id: 18, src : '../images/fruits/i18.jpg'},
-    {id: 19, src : '../images/fruits/i19.jpg'},
-    {id: 20, src : '../images/fruits/i20.jpg'}
+    {id: 1, src : i1},
+    {id: 2, src : i2},
+    {id: 3, src : i3},
+    {id: 4, src : i4},
+    {id: 5, src : i5},
+    {id: 6, src : i6},
+    {id: 7, src : i7},
+    {id: 8, src : i8},
+    {id: 9, src : i9},
+    {id: 10, src : i10},
+    {id: 11, src : i11},
+    {id: 12, src : i12},
+    {id: 13, src : i13},
+    {id: 14, src : i14},
+    {id: 15, src : i15},
+    {id: 16, src : i16},
+    {id: 17, src : i17},
+    {id: 18, src : i18},
+    {id: 19, src : i19},
+    {id: 20, src : i20}
 
 ];
 

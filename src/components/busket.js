@@ -25,6 +25,10 @@ function Busket (props){
   }
 
   //true clicked image styling
+  if(props.ClickedImage === true){
+console.log(`true if function.............................`)
+
+  }
   console.log(`clicked image styling ${props.ClickedImage}`)
 
 

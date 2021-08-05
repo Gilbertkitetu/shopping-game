@@ -32,7 +32,7 @@ import fruits from './components/fruit-images';
 import './App.css';
 
 
-
+let ClickedImage = false;
 
 function App() {
 
@@ -41,17 +41,23 @@ function App() {
 
   //monitor clicked events
   //const [clickedImage, setClickedImage] = useState(false);
-var ClickedImage;
+ 
 
-  const handleClickedImage = (childData, ClickedImage) => {
+
+  const handleClickedImage = (childData) => {
     //childData.preventDefault();
     ClickedImage=childData;
-    console.log(`data from child ${childData}`);
+    console.log(`data from child ${ClickedImage}`);
     // busketState = childData;
-    return childData;
-
+    //return childData;
     
   }
+
+
+
+
+  //console.log(`data from child ${ClickedImage}`);
+
   //console.log(`child to parent ${clickedImage}`)
   
 

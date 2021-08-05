@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+import './styles/showItemsLeft.css';
+
 function ShowItemsLeft (props){
 
 
