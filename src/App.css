@@ -97,6 +97,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
+  opacity: 0.5;
+
   grid-column: col 2 /span 2;
   grid-row: row 2 ;
 }
@@ -107,7 +109,7 @@
   height: 100%;
   margin: 0 auto;
   z-index: 10;
-  opacity: 0.5;
+  
   
   position: absolute;
 

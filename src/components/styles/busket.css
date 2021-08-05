@@ -8,12 +8,24 @@
 	margin: 2px;
 	font-family: 'helvetica', san-serif;
 
-	outline: none;
+	border: 1px solid black;
 	text-align: center;
     border-radius: 3px;
     cursor: pointer;
 	object-fit: contain;
+
+
 }
+.busket-item:hover {
+    transform: scale(3);
+            /* Scaling button to 0.98 to its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */
+			background-color: rgba(75,173,59, .8);
+
+            
+}
+  
 
 .busket-item img {
 	width: 100%;
