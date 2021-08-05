@@ -12,25 +12,19 @@ function Busket (props){
 //console.log(`show items id ${props.id}`);
 //console.log(props)
 
-  function randomArrayShuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
-  }
+  // function randomArrayShuffle(array) {
+  //   var currentIndex = array.length, temporaryValue, randomIndex;
+  //   while (0 !== currentIndex) {
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex -= 1;
+  //     temporaryValue = array[currentIndex];
+  //     array[currentIndex] = array[randomIndex];
+  //     array[randomIndex] = temporaryValue;
+  //   }
+  //   return array;
+  // }
 
-  //true clicked image styling
-  if(props.ClickedImage === true){
-console.log(`true if function.............................`)
-
-  }
-  console.log(`clicked image styling ${props.ClickedImage}`)
-
+  
 
 
   //const listOfAllItems = props.listOfItems;
@@ -45,6 +39,20 @@ console.log(`true if function.............................`)
   <li className="busket-item"><img src={item.src} alt={item.id}/></li>
   
   );
+
+
+  const include = (arr,obj) => {
+    return (arr.indexOf(obj) !== -1);
+}
+
+  //true clicked image styling
+  var clickeId = props.ClickedImage;
+  var id = include(arrayOfBoxes, clickeId);
+  if(id){
+console.log(`true if function.............................`)
+
+  }
+  console.log(`clicked image styling ${props.ClickedImage}`);
 
 
     return(

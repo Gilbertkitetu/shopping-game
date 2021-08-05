@@ -20,21 +20,29 @@ import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
 import CountDownTimer from './components/countDownTimer';
 import fruits from './components/fruit-images';
-
-
-
-
-
-
-
+import Popup from './components/popup';
 
 
 import './App.css';
 
 
-let ClickedImage = false;
+
+
+
+
+
+
+let ClickedImage = 0;
 
 function App() {
+
+
+  const [isOpen,  setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+
 
   //countDownTimer variables
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
@@ -139,6 +147,23 @@ for(let i = 15; i <= 19; i++){
 
   return (
     <div className="App">
+
+
+{/* <div>
+    <input
+      type="button"
+      value="Click to Open Popup"
+      onClick={togglePopup}
+    />
+    
+    {isOpen && <Popup
+     
+      handleClose={togglePopup}
+    />}
+  </div> */}
+
+
+
        <BrowserRouter>
        <div className="header">
         
