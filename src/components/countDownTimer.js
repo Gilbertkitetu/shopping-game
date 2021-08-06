@@ -10,6 +10,7 @@ const CountDownTimer = ({hoursMinSecs}) => {
    
         if (hrs === 0 && mins === 0 && secs === 0) 
             reset()
+            
         else if (mins === 0 && secs === 0) {
             setTime([hrs - 1, 59, 59]);
         } else if (secs === 0) {
@@ -20,7 +21,11 @@ const CountDownTimer = ({hoursMinSecs}) => {
     };
 
 
-    const reset = () => setTime([parseInt(hours), parseInt(minutes), parseInt(seconds)]);
+    const reset = () => {setTime([parseInt(hours), parseInt(minutes), parseInt(seconds)]);
+        console.log(`This is a reset`)
+        alert('Time over');
+        window.location.reload();
+    };
 
     
     React.useEffect(() => {
