@@ -32,10 +32,13 @@ import './App.css';
 
 
 
-let ClickedImage = 0;
+
 
 function App() {
 
+  let ClickedImage = {
+    id: 0
+  };
 
   const [isOpen,  setIsOpen] = useState(false);
 
@@ -48,19 +51,25 @@ function App() {
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
 
   //monitor clicked events
-  //const [clickedImage, setClickedImage] = useState(false);
+  const [clickedId, setClickedId] = useState(false);
  
 
-
-  const handleClickedImage = (childData) => {
-    //childData.preventDefault();
-    ClickedImage=childData;
-    console.log(`data from child ${ClickedImage}`);
-    // busketState = childData;
-    //return childData;
-    
+  const handleStyleOfClickedImage = (clickedId) => {
+    console.log(`data from child ${clickedId}`);
   }
 
+
+  var handleClickedImage = (childData) => {
+    //childData.preventDefault();
+    ClickedImage.id=childData;
+    console.log(`data from child ${childData}`);
+    // busketState = childData;
+    //return childData;
+    handleStyleOfClickedImage(childData);
+    setClickedId(childData);
+    
+  }
+ 
 
 
 
@@ -196,7 +205,7 @@ for(let i = 15; i <= 19; i++){
              </div>
 
              <div className=" busket-items">
-                 <Busket busketItems = {busketItems} ClickedImage={ClickedImage}/>
+                 <Busket busketItems = {busketItems} ClickedImage={clickedId}/>
              </div>
            </div>
 

@@ -30,13 +30,19 @@ function Busket (props){
   //const listOfAllItems = props.listOfItems;
 
    const itemsInTheBusket = props.busketItems;
+ 
 
   //= randomArrayShuffle(listOfAllItems);
   // itemsInTheBusket.length = Math.min(itemsInTheBusket.length, 12);
   // console.log(`items in the busket ${itemsInTheBusket[1].src}`);
 
+//a function to change color of clicked busket itemsInTheBusket
+var changeColor = () => {
+
+}
+
   const arrayOfBoxes = itemsInTheBusket.map((item) => 
-  <li className="busket-item"><img src={item.src} alt={item.id}/></li>
+  <li className="busket-item"><input type="checkbox"/><img src={item.src} alt={item.id} /></li>
   
   );
 
@@ -45,6 +51,7 @@ function Busket (props){
     return (arr.indexOf(obj) !== -1);
 }
 
+var clickedImageIds = [];
   //true clicked image styling
   var clickeId = props.ClickedImage;
   var id = include(arrayOfBoxes, clickeId);
@@ -52,6 +59,7 @@ function Busket (props){
 console.log(`true if function.............................`)
 
   }
+  
   console.log(`clicked image styling ${props.ClickedImage}`);
 
 
