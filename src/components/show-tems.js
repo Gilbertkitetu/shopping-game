@@ -12,7 +12,15 @@ import './styles/busket.css';
 
 function ShowItems (props){
 
+//props from app
+var bottomItems = props.bottomItems;
 
+console.log(`Buttom items are: ${bottomItems}`);
+
+
+var mappedBottomItems = bottomItems.map((item)=>
+<li className="item" key={item}>{item}</li>
+);
 
 
 
@@ -23,7 +31,7 @@ function ShowItems (props){
 
 
     return(
-         <ul>   </ul>
+         <ul>{mappedBottomItems}</ul>
         // <h1>show items.{console.log(`Array ${arr}`)}</h1>
            
        

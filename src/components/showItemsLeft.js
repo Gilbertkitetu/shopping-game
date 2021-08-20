@@ -6,15 +6,19 @@ import './styles/showItemsLeft.css';
 function ShowItemsLeft (props){
 
 
-//function to search if item clicked is in the selected
-//busket items
+var leftItems = props.leftItems;
 
+console.log(`Items on the left shall be: ${leftItems}`);
+
+var mappedLeftItems = leftItems.map((item)=>
+<li className="item" key={item}>{item}</li>
+);
 
 
 
 
     return (
-        <ul> </ul>
+        <ul>{mappedLeftItems}</ul>
         
         );
 }

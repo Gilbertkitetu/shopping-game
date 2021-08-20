@@ -104,7 +104,7 @@ var busketItems = busketItems1;
   //buttom boxes image values
   var bottomItems1 = [];
   for (let i = 0; i <= 9; i++){
-    //console.log(listOfItems[i]);
+  
     bottomItems1.push(listOfItems[i]);
   }
 
@@ -171,7 +171,7 @@ console.log(`Left items ${leftItems}`);
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft  />
+             <ShowItemsLeft leftItems={leftItems} />
           
            </div>
 
@@ -189,11 +189,11 @@ console.log(`Left items ${leftItems}`);
 
 
            <div className="box show-items-right">
-           <ShowItemsRight />
+           <ShowItemsRight rightItems={rightItems}/>
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems/>
+           <ShowItems bottomItems={bottomItems}/>
            </div>
 
            <div className="box d"></div>

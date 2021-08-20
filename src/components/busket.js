@@ -16,12 +16,14 @@ function Busket (props){
   
 
  
-
+var mappedItems = busketItems.map((item)=>
+<li className="busket-item" key={item}>{item}</li>
+);
 
     return(
        
 
-          <ul></ul>
+          <ul>{mappedItems}</ul>
             
      
     );

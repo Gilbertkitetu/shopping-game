@@ -1,11 +1,16 @@
 import React from 'react';
 
-import ShowItems from './show-tems';
+import './styles/showItemsLeft.css';
 
 function ShowItemsRight (props){
 
-  //function to search if item clicked is in the selected
-//busket items
+ var rightItems = props.rightItems;
+ console.log(`Right items shall be ${rightItems}`);
+
+
+ var mappedRightItems = rightItems.map((item)=>
+ <li className="item" key={item}>{item}</li>
+ );
 
 
 
@@ -18,7 +23,7 @@ function ShowItemsRight (props){
 
 
     return (
-         <ul></ul>
+         <ul>{mappedRightItems}</ul>
         
         );
 }
