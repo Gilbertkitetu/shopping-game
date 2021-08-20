@@ -42,7 +42,7 @@ var changeColor = () => {
 }
 
   const arrayOfBoxes = itemsInTheBusket.map((item) => 
-  <li className="busket-item"><input type="checkbox"/><img src={item.src} alt={item.id} /></li>
+  <li className="busket-item"><p>{item.id} </p></li>
   
   );
 

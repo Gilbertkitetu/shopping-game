@@ -43,7 +43,7 @@ console.log(id);
     const arr = props.leftItems;
 
     const arrayOfLeftItems = arr.map((item) => 
-    <li className="item" onClick={()=> {handleClick(item.id)}}><img src={item.src} alt={item.id}/></li>
+    <li className="item" onClick={()=> {handleClick(item.id)}}><p>{item.id}</p></li>
     );
  
 

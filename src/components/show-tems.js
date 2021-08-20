@@ -51,7 +51,7 @@ const handleSubmit = (event) => {
 
 
 const arrayOfItemsBotttom = arr.map((item) => 
-   <li className="item" onClick={()=> {handleClick(item.id)}}> <img className="item" src={item.src} alt={item.id} /></li>
+   <li className="item" onClick={()=> {handleClick(item.id)}}> <p className="item">{item.id}</p></li>
    );
     return(
          <ul>{arrayOfItemsBotttom}   </ul>
