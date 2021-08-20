@@ -19,7 +19,7 @@ import ShowItems from './components/show-tems';
 import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
 import CountDownTimer from './components/countDownTimer';
-import fruits from './components/fruit-images';
+import numbers from './components/numbers';
 import Popup from './components/popup';
 
 
@@ -36,57 +36,28 @@ import './App.css';
 
 function App() {
 
-  let ClickedImage = {
-    id: 0
-  };
 
-  const [isOpen,  setIsOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  }
+  // const [isOpen,  setIsOpen] = useState(false);
+
+  // const togglePopup = () => {
+  //   setIsOpen(!isOpen);
+  // }
 
 
   //countDownTimer variables
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
 
-  //monitor clicked events
-  const [clickedId, setClickedId] = useState(false);
- 
 
-  const handleStyleOfClickedImage = (clickedId) => {
-    console.log(`data from child ${clickedId}`);
-  }
-
-
-  var handleClickedImage = (childData) => {
-    //childData.preventDefault();
-    ClickedImage.id=childData;
-    console.log(`data from child ${childData}`);
-    // busketState = childData;
-    //return childData;
-    handleStyleOfClickedImage(childData);
-    setClickedId(childData);
-    
-  }
  
 
 
 
-  //console.log(`data from child ${ClickedImage}`);
-
-  //console.log(`child to parent ${clickedImage}`)
-  
-
-
-//main array with supplies to all boxes
-  //let listOfItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
- //let listOfItems = fruits;
 
 //loading images to array listOfItems
-  const listOfItems1 = [];
+  var listOfItems1 = [];
 for (let i = 0; i <= 19; i++){
-listOfItems1.push(fruits[i]);
+listOfItems1.push(numbers[i].id);
 }
 
 
@@ -111,17 +82,18 @@ listOfItems1.push(fruits[i]);
   }
 
 
-  const listOfItems = randomArrayShuffle(listOfItems1);
+  var listOfItems = listOfItems1;
+  console.log(`Original list ${listOfItems}`)
   
 
-  //busket box image values
+  //center busket values
 
-  const busketItems1 = [];
+  var busketItems1 = [];
 for (let i = 0; i <= 19; i++){
-busketItems1.push(fruits[i]);
+busketItems1.push(listOfItems[i]);
 }
 
-const busketItems = randomArrayShuffle(busketItems1);
+var busketItems = busketItems1;
 
 
   busketItems.length = Math.min(listOfItems.length, 12);
@@ -130,28 +102,34 @@ const busketItems = randomArrayShuffle(busketItems1);
 
 
   //buttom boxes image values
-  const bottomItems = [];
+  var bottomItems1 = [];
   for (let i = 0; i <= 9; i++){
     //console.log(listOfItems[i]);
-    bottomItems.push(listOfItems[i]);
+    bottomItems1.push(listOfItems[i]);
   }
+
+  var bottomItems = randomArrayShuffle(bottomItems1);
 
 
   console.log(`Bottom items ${bottomItems}`);
 
 
   //right boxes images value
-const rightItems = [];
+var rightItems1 = [];
 for (let i = 10; i <= 14; i++){
-rightItems.push(listOfItems[i]);
+rightItems1.push(listOfItems[i]);
 }
+var rightItems = randomArrayShuffle(rightItems1);
+console.log(`Right items ${rightItems}`);
 
  
 //left boxes images values
-const leftItems = [];
+var leftItems1 = [];
 for(let i = 15; i <= 19; i++){
-  leftItems.push(listOfItems[i]);
+  leftItems1.push(listOfItems[i]);
 }
+var leftItems = randomArrayShuffle(leftItems1);
+console.log(`Left items ${leftItems}`);
 
 
   return (
@@ -184,7 +162,7 @@ for(let i = 15; i <= 19; i++){
            </div>
 
            <div className="box b">
-             <h1>Shopping Game</h1>
+             <h1>Math Games</h1>
            </div>
 
            <div className="box c">
@@ -193,7 +171,7 @@ for(let i = 15; i <= 19; i++){
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft leftItems= {leftItems} busketItems={busketItems} parentCallback={handleClickedImage}/>
+             <ShowItemsLeft  />
           
            </div>
 
@@ -205,17 +183,17 @@ for(let i = 15; i <= 19; i++){
              </div>
 
              <div className=" busket-items">
-                 <Busket busketItems = {busketItems} ClickedImage={clickedId}/>
+                 <Busket busketItems= {busketItems}/>
              </div>
            </div>
 
 
            <div className="box show-items-right">
-           <ShowItemsRight rightItems = {rightItems} busketItems={busketItems} parentCallback={handleClickedImage}/>
+           <ShowItemsRight />
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems buttomItem = {bottomItems} busketItems={busketItems} parentCallback={handleClickedImage}/>
+           <ShowItems/>
            </div>
 
            <div className="box d"></div>

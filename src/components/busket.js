@@ -6,67 +6,22 @@ import './styles/busket.css';
 
 function Busket (props){
 
-  //const numberOfBoxes = [1,2,3,4,5,6,7,8,9,10,11,12];
+  //props busket values shall be 
+  var busketItems = props.busketItems;
+  console.log(`busketItems shall be ${busketItems}`);
 
 
-//console.log(`show items id ${props.id}`);
-//console.log(props)
-
-  // function randomArrayShuffle(array) {
-  //   var currentIndex = array.length, temporaryValue, randomIndex;
-  //   while (0 !== currentIndex) {
-  //     randomIndex = Math.floor(Math.random() * currentIndex);
-  //     currentIndex -= 1;
-  //     temporaryValue = array[currentIndex];
-  //     array[currentIndex] = array[randomIndex];
-  //     array[randomIndex] = temporaryValue;
-  //   }
-  //   return array;
-  // }
-
-  
-
-
-  //const listOfAllItems = props.listOfItems;
-
-   const itemsInTheBusket = props.busketItems;
  
 
-  //= randomArrayShuffle(listOfAllItems);
-  // itemsInTheBusket.length = Math.min(itemsInTheBusket.length, 12);
-  // console.log(`items in the busket ${itemsInTheBusket[1].src}`);
-
-//a function to change color of clicked busket itemsInTheBusket
-var changeColor = () => {
-
-}
-
-  const arrayOfBoxes = itemsInTheBusket.map((item) => 
-  <li className="busket-item"><p>{item.id} </p></li>
   
-  );
 
-
-  const include = (arr,obj) => {
-    return (arr.indexOf(obj) !== -1);
-}
-
-var clickedImageIds = [];
-  //true clicked image styling
-  var clickeId = props.ClickedImage;
-  var id = include(arrayOfBoxes, clickeId);
-  if(id){
-console.log(`true if function.............................`)
-
-  }
-  
-  console.log(`clicked image styling ${props.ClickedImage}`);
+ 
 
 
     return(
        
 
-          <ul>{arrayOfBoxes}</ul>
+          <ul></ul>
             
      
     );
