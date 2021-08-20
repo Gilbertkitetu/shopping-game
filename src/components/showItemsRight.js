@@ -8,8 +8,16 @@ function ShowItemsRight (props){
  console.log(`Right items shall be ${rightItems}`);
 
 
+ 
+var handleClick = (item)  => {
+  
+  console.log(`Click happened at show-item-right: ${item}`);
+  props.handleClickedItems(item);
+}
+
+
  var mappedRightItems = rightItems.map((item)=>
- <li className="item" key={item}>{item}</li>
+ <li className="item" key={item} onClick={() => handleClick(item)}>{item}</li>
  );
 
 

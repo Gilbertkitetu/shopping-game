@@ -131,6 +131,22 @@ for(let i = 15; i <= 19; i++){
 var leftItems = randomArrayShuffle(leftItems1);
 console.log(`Left items ${leftItems}`);
 
+var handleChangeOfClicked;
+
+//a function to collect clicked items in the children
+var handleClickedItems = (item) => {
+  console.log(`I have been clicked ${item}`);
+  handleChangeOfClicked = item;
+
+  if(busketItems.includes(item)){
+    console.log(`${item} is in the busket`)
+  }
+  
+
+}
+console.log(`HANDLE${handleChangeOfClicked}`);
+
+
 
   return (
     <div className="App">
@@ -171,7 +187,7 @@ console.log(`Left items ${leftItems}`);
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft leftItems={leftItems} />
+             <ShowItemsLeft leftItems={leftItems} handleClickedItems={handleClickedItems}/>
           
            </div>
 
@@ -189,11 +205,11 @@ console.log(`Left items ${leftItems}`);
 
 
            <div className="box show-items-right">
-           <ShowItemsRight rightItems={rightItems}/>
+           <ShowItemsRight rightItems={rightItems} handleClickedItems={handleClickedItems}/>
            </div>
 
            <div className="box show-items-bottom">
-           <ShowItems bottomItems={bottomItems}/>
+           <ShowItems bottomItems={bottomItems} handleClickedItems={handleClickedItems}/>
            </div>
 
            <div className="box d"></div>

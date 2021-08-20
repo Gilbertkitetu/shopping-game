@@ -10,8 +10,15 @@ var leftItems = props.leftItems;
 
 console.log(`Items on the left shall be: ${leftItems}`);
 
+
+var handleClick = (item)  => {
+    console.log(`Click happened at show-item-left: ${item}`);
+    props.handleClickedItems(item);
+}
+
+
 var mappedLeftItems = leftItems.map((item)=>
-<li className="item" key={item}>{item}</li>
+<li className="item" key={item} onClick={() => handleClick(item)}>{item}</li>
 );
 
 

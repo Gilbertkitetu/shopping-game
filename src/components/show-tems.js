@@ -17,9 +17,13 @@ var bottomItems = props.bottomItems;
 
 console.log(`Buttom items are: ${bottomItems}`);
 
+var handleClick = (item)  => {
+    console.log(`Click happened at show-item-button: ${item}`);
+    props.handleClickedItems(item);
+}
 
 var mappedBottomItems = bottomItems.map((item)=>
-<li className="item" key={item}>{item}</li>
+<li className="item" key={item} onClick={() => handleClick(item)}>{item}</li>
 );
 
 
