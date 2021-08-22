@@ -8,6 +8,7 @@ function Busket (props){
 
   //props busket values shall be 
   var busketItems = props.busketItems;
+  var sendItemPropToBusket = props.sendItemPropToBusket;
   console.log(`busketItems shall be ${busketItems}`);
 
   var color = '';

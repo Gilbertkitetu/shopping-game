@@ -134,12 +134,18 @@ console.log(`Left items ${leftItems}`);
 
 
 //a function to collect clicked items in the children
+var item1;
 var handleClickedItems = (item) => {
   console.log(`I have been clicked ${item}`);
   
 
   if(busketItems.includes(item)){
     console.log(`${item} is in the busket`)
+
+    item1 = item
+    console.log(`item is ${item1}`);
+
+    sendItemPropToBusket(item);
     
     //sendItemProp(item);
     return item;
@@ -148,14 +154,15 @@ var handleClickedItems = (item) => {
 
 }
 
+
 //var item = 2
 //handleChangeOfClicked = handleClickedItems();
 
-
-// var sendItemProp = (item) => {
-//   handleChangeOfClicked = item;
-  
-// }
+ var sendItemPropToBusket;
+ handleChangeOfClicked = sendItemPropToBusket =  (item) => {
+   console.log(`Item to busket`);
+   return item;
+ }
 console.log(`HANDLE${handleChangeOfClicked}`);
 
 
@@ -210,7 +217,7 @@ console.log(`HANDLE${handleChangeOfClicked}`);
              </div>
 
              <div className=" busket-items">
-                 <Busket busketItems= {busketItems}/>
+                 <Busket busketItems= {busketItems} sendItemPropToBusket={sendItemPropToBusket}/>
              </div>
            </div>
 
