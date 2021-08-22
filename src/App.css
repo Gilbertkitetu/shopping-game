@@ -1,9 +1,10 @@
 .App {
   text-align: center;
   width: 100%;
-  height: 950px;
+  height: 100%;
   color: #fff;
-  background-image: url(./backgrounds/pexels-aleksandar-pasaric-3310691.jpg);
+  /* background-image: url(./backgrounds/pexels-aleksandar-pasaric-3310691.jpg); */
+  background-color: rgb(255, 208, 0);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -36,13 +37,13 @@
 }
 .game-container{
   background-color: rgb(255, 255, 255, .5);
-  width: 70%;
-  height: 800px;
-  margin-left: 15%;
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, [col] 350px);
+  grid-template-columns: repeat(auto-fill, [col] 25%);
   grid-template-rows: repeat(auto-fill, [row] auto  );
   grid-gap: 5px;
  

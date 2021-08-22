@@ -10,14 +10,19 @@ function Busket (props){
   var busketItems = props.busketItems;
   console.log(`busketItems shall be ${busketItems}`);
 
-
- 
+  var color = '';
+ var item = 12
+  if([1,6,4,10].includes(item)){
+    color = 'green'
+    
+  }
 
   
 
+console.log(`Element clicked at the busket ${props.item}`)
  
 var mappedItems = busketItems.map((item)=>
-<li className="busket-item" key={item}>{item}</li>
+<li style={{backgroundColor: color}} className="busket-item" key={item}>{item}</li>
 );
 
     return(

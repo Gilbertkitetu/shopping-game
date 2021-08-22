@@ -32,7 +32,7 @@ import './App.css';
 
 
 
-
+var handleChangeOfClicked;
 
 function App() {
 
@@ -131,21 +131,32 @@ for(let i = 15; i <= 19; i++){
 var leftItems = randomArrayShuffle(leftItems1);
 console.log(`Left items ${leftItems}`);
 
-var handleChangeOfClicked;
+
 
 //a function to collect clicked items in the children
 var handleClickedItems = (item) => {
   console.log(`I have been clicked ${item}`);
-  handleChangeOfClicked = item;
+  
 
   if(busketItems.includes(item)){
     console.log(`${item} is in the busket`)
+    
+    //sendItemProp(item);
+    return item;
   }
   
 
 }
-console.log(`HANDLE${handleChangeOfClicked}`);
 
+//var item = 2
+//handleChangeOfClicked = handleClickedItems();
+
+
+// var sendItemProp = (item) => {
+//   handleChangeOfClicked = item;
+  
+// }
+console.log(`HANDLE${handleChangeOfClicked}`);
 
 
   return (
