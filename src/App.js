@@ -14,7 +14,7 @@ import busket from './images/basket/shoppingbag.png';
 
 
 //import components
-import Busket from './components/busket';
+// import Busket from './components/busket';
 import ShowItems from './components/show-tems';
 import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
@@ -24,6 +24,7 @@ import Popup from './components/popup';
 
 
 import './App.css';
+import './components/styles/busket.css';
 
 
 
@@ -143,13 +144,13 @@ var handleClickedItems = (item) => {
     console.log(`${item} is in the busket`)
 
 
-    setUpdateBusketItem = item;
+    storeInArr(item);
    
 
     
     
     //sendItemProp(item);
-    return item;
+    
   }
   
 
@@ -160,6 +161,26 @@ var handleClickedItems = (item) => {
 
  
 console.log(`HANDLE${handleChangeOfClicked}`);
+
+
+//the busket dealer
+var storeClicked = [];
+
+//a func to store clicked value to array
+var storeInArr = (item) => {
+  storeClicked.push(item);
+}
+
+// a func to keep elements in the array color changed.
+var color = '';
+if(storeClicked.includes(busketItems)){
+  color = 'red';
+
+}
+ 
+var mappedItems = busketItems.map((item)=>
+<li style={{backgroundColor: color}} className="busket-item" key={item}>{item}</li>
+);
 
 
   return (
@@ -213,7 +234,8 @@ console.log(`HANDLE${handleChangeOfClicked}`);
              </div>
 
              <div className=" busket-items">
-                 <Busket busketItems= {busketItems} updateBusketItem= {updateBusketItem}/>
+                 {/* <Busket busketItems= {busketItems} updateBusketItem= {updateBusketItem}/> */}
+                 <ul>{mappedItems}</ul>
              </div>
            </div>
 
