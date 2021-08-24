@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './styles/busket.css';
 //imports
@@ -6,12 +6,22 @@ import './styles/busket.css';
 
 function Busket (props){
 
+  let [updateColor, setUpdateColor] = useState('');
+
   //props busket values shall be 
   var busketItems = props.busketItems;
-  var sendItemPropToBusket = props.sendItemPropToBusket;
+ var updateBusketItemStyle = props.updateBusketItem;
   console.log(`busketItems shall be ${busketItems}`);
 
+  console.log(`Busket style ${updateBusketItemStyle}`);
+
+  setUpdateColor = updateBusketItemStyle;
+
   var color = '';
+if(updateColor){
+  color = 'red';
+}
+
  var item = 12
   if([1,6,4,10].includes(item)){
     color = 'green'

@@ -38,7 +38,7 @@ function App() {
 
 
 
-  // const [isOpen,  setIsOpen] = useState(false);
+  let  [updateBusketItem,  setUpdateBusketItem] = useState(0);
 
   // const togglePopup = () => {
   //   setIsOpen(!isOpen);
@@ -134,7 +134,7 @@ console.log(`Left items ${leftItems}`);
 
 
 //a function to collect clicked items in the children
-var item1;
+
 var handleClickedItems = (item) => {
   console.log(`I have been clicked ${item}`);
   
@@ -142,10 +142,11 @@ var handleClickedItems = (item) => {
   if(busketItems.includes(item)){
     console.log(`${item} is in the busket`)
 
-    item1 = item
-    console.log(`item is ${item1}`);
 
-    sendItemPropToBusket(item);
+    setUpdateBusketItem = item;
+   
+
+    
     
     //sendItemProp(item);
     return item;
@@ -154,15 +155,10 @@ var handleClickedItems = (item) => {
 
 }
 
-
 //var item = 2
 //handleChangeOfClicked = handleClickedItems();
 
- var sendItemPropToBusket;
- handleChangeOfClicked = sendItemPropToBusket =  (item) => {
-   console.log(`Item to busket`);
-   return item;
- }
+ 
 console.log(`HANDLE${handleChangeOfClicked}`);
 
 
@@ -217,7 +213,7 @@ console.log(`HANDLE${handleChangeOfClicked}`);
              </div>
 
              <div className=" busket-items">
-                 <Busket busketItems= {busketItems} sendItemPropToBusket={sendItemPropToBusket}/>
+                 <Busket busketItems= {busketItems} updateBusketItem= {updateBusketItem}/>
              </div>
            </div>
 
