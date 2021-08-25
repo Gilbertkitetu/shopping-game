@@ -88,7 +88,7 @@
   margin: 0 auto;
   border-radius: 5px;
   position: relative;
-  background-color: #000000ee;
+  background-color: #000000e0;
 
   grid-column: col 2 /span 2;
   grid-row: row 2 ;
