@@ -4,7 +4,7 @@
   height: 100%;
   color: #fff;
   /* background-image: url(./backgrounds/pexels-aleksandar-pasaric-3310691.jpg); */
-  background-color: #ffa600;
+  background-color: #ffffffe5;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -51,7 +51,7 @@
 }
 
 .box {
-  background-color: #FFCC33;
+  background-color: #30b837;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -60,10 +60,10 @@
   /* box-shadow: rgba(216, 24, 24, 0.56) 0px 22px 70px 4px; */
 }
 .change {
-  background-color: #942641;
+  background-color: #09302e;
 }
 .bottom {
-  background-color: #286077;
+  background-color: #09302e;
 }
 .a {
   grid-column: col;
@@ -88,7 +88,7 @@
   margin: 0 auto;
   border-radius: 5px;
   position: relative;
-  
+  background-color: #000000ee;
 
   grid-column: col 2 /span 2;
   grid-row: row 2 ;

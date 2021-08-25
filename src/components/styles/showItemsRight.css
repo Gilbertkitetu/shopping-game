@@ -6,7 +6,7 @@
 	vertical-align: top;
 	margin: 2px;
 	font-family: 'helvetica', san-serif;
-	background-color: #FFCC33;
+	background-color: #30b837;
 	outline: none;
 	text-align: center;
     border-radius: 3px;
@@ -44,8 +44,9 @@
 
 .item:hover {
     transform: scale(2);
+	background-color: #30b83773;
             /* Scaling button to 0.98 to its original size */
-            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
             /* Lowering the shadow */
 
             

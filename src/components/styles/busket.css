@@ -7,7 +7,7 @@
 	vertical-align: top;
 	margin: 2px;
 	font-family: 'helvetica', san-serif;
-	background-color: #286077;
+	background-color: #065a56;
 
 	
 	text-align: center;
@@ -22,11 +22,11 @@
 }
 .busket-item:hover {
 	outline: none;
-    transform: scale(3);
+    transform: scale(1.5);
             /* Scaling button to 0.98 to its original size */
-            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
             /* Lowering the shadow */
-			background-color: #286077;
+			background-color: #09302e;
 
 
 			/* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */

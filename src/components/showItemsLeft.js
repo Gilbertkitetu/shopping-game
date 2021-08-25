@@ -18,7 +18,7 @@ var handleClick = (item)  => {
 
 
 var mappedLeftItems = leftItems.map((item)=>
-<li className="item" key={item} onClick={() => handleClick(item)}>{item}</li>
+<li className="item-left" key={item} onClick={() => handleClick(item)}>{item}</li>
 );
 
 

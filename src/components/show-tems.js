@@ -8,7 +8,7 @@ import React from 'react';
 // import Busket from './busket';
 
 import './styles/show-item.css';
-import './styles/busket.css';
+
 
 function ShowItems (props){
 
@@ -23,7 +23,7 @@ var handleClick = (item)  => {
 }
 
 var mappedBottomItems = bottomItems.map((item)=>
-<li className="item" key={item} onClick={() => handleClick(item)}>{item}</li>
+<li className="item-bottom" key={item} onClick={() => handleClick(item)}>{item}</li>
 );
 
 
