@@ -56,10 +56,11 @@ function App() {
 
 //loading images to array listOfItems
   var listOfItems1 = [];
+  
 for (let i = 0; i <= 19; i++){
 listOfItems1.push(numbers[i].id);
 }
-
+var listOfItems = randomArrayShuffle(listOfItems1);
 
   function randomArrayShuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -74,7 +75,7 @@ listOfItems1.push(numbers[i].id);
   }
 
 
-  var listOfItems = listOfItems1;
+  
   console.log(`Original list ${listOfItems}`)
   
 
@@ -83,33 +84,33 @@ listOfItems1.push(numbers[i].id);
 
 
   //buttom boxes image values
-  var bottomItems1 = [];
+  var bottomItems = [];
   for (let i = 0; i <= 9; i++){
   
-    bottomItems1.push(listOfItems[i]);
+    bottomItems.push(listOfItems[i]);
   }
 
-  var bottomItems = randomArrayShuffle(bottomItems1);
+ 
 
 
   console.log(`Bottom items ${bottomItems}`);
 
 
   //right boxes images value
-var rightItems1 = [];
+var rightItems = [];
 for (let i = 10; i <= 14; i++){
-rightItems1.push(listOfItems[i]);
+rightItems.push(listOfItems[i]);
 }
-var rightItems = randomArrayShuffle(rightItems1);
+
 console.log(`Right items ${rightItems}`);
 
  
 //left boxes images values
-var leftItems1 = [];
+var leftItems = [];
 for(let i = 15; i <= 19; i++){
-  leftItems1.push(listOfItems[i]);
+  leftItems.push(listOfItems[i]);
 }
-var leftItems = randomArrayShuffle(leftItems1);
+
 console.log(`Left items ${leftItems}`);
 
 
@@ -138,7 +139,13 @@ const showAlert = (show = false, type="", msg = "")=> {
 const removeItem = (id) => {
   showAlert(true, "danger", "item removed");
   setList(list.filter((item) => item.id !== id));
+  clearList()
 };
+
+const clearList = () => {
+  showAlert(true, "danger", "empty list");
+  setList([]);
+}
 
 useEffect(() => {
   localStorage.setItem("list", JSON.stringify(list));
