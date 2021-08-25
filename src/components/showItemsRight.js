@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles/showItemsLeft.css';
+import './styles/showItemsRight.css';
 
 function ShowItemsRight (props){
 

@@ -25,6 +25,7 @@ import Busket from './components/busket';
 
 
 import './App.css';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 
 
@@ -162,7 +163,7 @@ useEffect(() => {
 
          <div className="game-container">
 
-           <div className="box a">
+           <div className="box change a">
              <h2>Level : 1</h2>
            </div>
 
@@ -171,7 +172,14 @@ useEffect(() => {
            </div>
 
            <div className="box c">
-             <h2><CountDownTimer hoursMinSecs={hoursMinSecs}/></h2>
+             <CountdownCircleTimer
+             isPlaying
+             duration = {50}
+             colors = {[["#942641", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
+             onComplete = {() => [true, 1000]}
+             >
+               {CountDownTimer}
+             </CountdownCircleTimer>
            </div>
 
 
@@ -193,15 +201,15 @@ useEffect(() => {
            </div>
 
 
-           <div className="box show-items-right">
+           <div className="box bottom show-items-right">
            <ShowItemsRight rightItems={rightItems} handleClickedItems={handleClickedItems}/>
            </div>
 
-           <div className="box show-items-bottom">
+           <div className="box bottom show-items-bottom">
            <ShowItems bottomItems={bottomItems} handleClickedItems={handleClickedItems}/>
            </div>
 
-           <div className="box d"></div>
+           <div className="box change d"></div>
 
 
          </div>
