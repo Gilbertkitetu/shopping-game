@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
@@ -21,10 +21,10 @@ import ShowItemsLeft from './components/showItemsLeft';
 import CountDownTimer from './components/countDownTimer';
 import numbers from './components/numbers';
 import Popup from './components/popup';
+import Busket from './components/busket';
 
 
 import './App.css';
-import './components/styles/busket.css';
 
 
 
@@ -33,27 +33,26 @@ import './components/styles/busket.css';
 
 
 
-var handleChangeOfClicked;
+const getLocalStorage = () => {
+  let list = localStorage.getItem("list");
+  if (list) {
+    return (list = JSON.parse(localStorage.getItem("list")));
+  } else {
+    return [];
+  }
+};
+
 
 function App() {
 
+  const  [value,  setValue] = useState("");
+  const [list, setList] = useState(getLocalStorage());
+  const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
 
-
-  let  [updateBusketItem,  setUpdateBusketItem] = useState(0);
-
-  // const togglePopup = () => {
-  //   setIsOpen(!isOpen);
-  // }
 
 
   //countDownTimer variables
   const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
-
-
- 
-
-
-
 
 //loading images to array listOfItems
   var listOfItems1 = [];
@@ -61,14 +60,6 @@ for (let i = 0; i <= 19; i++){
 listOfItems1.push(numbers[i].id);
 }
 
-
-
-
-  //const arr = ['a','b','c','d','e','f','g','h','i','j'];
-
-  //the busket images
-
-  //randomize images array
 
   function randomArrayShuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -87,19 +78,8 @@ listOfItems1.push(numbers[i].id);
   console.log(`Original list ${listOfItems}`)
   
 
-  //center busket values
-
-  var busketItems1 = [];
-for (let i = 0; i <= 19; i++){
-busketItems1.push(listOfItems[i]);
-}
-
-var busketItems = busketItems1;
 
 
-  busketItems.length = Math.min(listOfItems.length, 12);
-
-  console.log(`busket items ${busketItems}`);
 
 
   //buttom boxes image values
@@ -139,67 +119,34 @@ console.log(`Left items ${leftItems}`);
 var handleClickedItems = (item) => {
   console.log(`I have been clicked ${item}`);
   
-
-  if(busketItems.includes(item)){
-    console.log(`${item} is in the busket`)
-
-
-    storeInArr(item);
-   
-
+  if(!item){
+    showAlert(true, "danger", "Nothing was Clicked");
+  }else{
+    showAlert(true, "success", "Something clicked");
     
-    
-    //sendItemProp(item);
-    
+    const newItem = { id: new Date().getTime().toString(), title: item };
+
+    setList([...list, newItem]);
+    setValue("");
   }
-  
+};
 
-}
+const showAlert = (show = false, type="", msg = "")=> {
+  setAlert({ show, type, msg });
+};
 
-//var item = 2
-//handleChangeOfClicked = handleClickedItems();
+const removeItem = (id) => {
+  showAlert(true, "danger", "item removed");
+  setList(list.filter((item) => item.id !== id));
+};
 
- 
-console.log(`HANDLE${handleChangeOfClicked}`);
-
-
-//the busket dealer
-var storeClicked = [];
-
-//a func to store clicked value to array
-var storeInArr = (item) => {
-  storeClicked.push(item);
-}
-
-// a func to keep elements in the array color changed.
-var color = '';
-if(storeClicked.includes(busketItems)){
-  color = 'red';
-
-}
- 
-var mappedItems = busketItems.map((item)=>
-<li style={{backgroundColor: color}} className="busket-item" key={item}>{item}</li>
-);
+useEffect(() => {
+  localStorage.setItem("list", JSON.stringify(list));
+}, [list]);
 
 
   return (
     <div className="App">
-
-
-{/* <div>
-    <input
-      type="button"
-      value="Click to Open Popup"
-      onClick={togglePopup}
-    />
-    
-    {isOpen && <Popup
-     
-      handleClose={togglePopup}
-    />}
-  </div> */}
-
 
 
        <BrowserRouter>
@@ -234,8 +181,7 @@ var mappedItems = busketItems.map((item)=>
              </div>
 
              <div className=" busket-items">
-                 {/* <Busket busketItems= {busketItems} updateBusketItem= {updateBusketItem}/> */}
-                 <ul>{mappedItems}</ul>
+                  <Busket items = {list} removeItem= {removeItem}/>
              </div>
            </div>
 

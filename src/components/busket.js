@@ -1,45 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './styles/busket.css';
 //imports
 // import BusketBox from './busketBox';
 
-function Busket (props){
+function Busket ({ items, removeItem }){
 
-  let [updateColor, setUpdateColor] = useState('');
 
-  //props busket values shall be 
-  var busketItems = props.busketItems;
- var updateBusketItemStyle = props.updateBusketItem;
-  console.log(`busketItems shall be ${busketItems}`);
 
-  console.log(`Busket style ${updateBusketItemStyle}`);
-
-  setUpdateColor = updateBusketItemStyle;
-
-  var color = '';
-if(updateColor){
-  color = 'red';
-}
-
- var item = 12
-  if([1,6,4,10].includes(item)){
-    color = 'green'
-    
-  }
-
-  
-
-console.log(`Element clicked at the busket ${props.item}`)
- 
-var mappedItems = busketItems.map((item)=>
-<li style={{backgroundColor: color}} className="busket-item" key={item}>{item}</li>
-);
 
     return(
        
 
-          <ul>{mappedItems}</ul>
+          <div className=''>
+            {items.map((item) => {
+              const { id, title } = item;
+              return(
+                <div className="busket-item" key={id}>
+                  <p>{title}</p>
+                  <button  type="button" onClick={()=> removeItem(id)}>X</button>
+                </div>
+              );
+            })
+
+            }
+          </div>
             
      
     );
