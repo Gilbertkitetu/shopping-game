@@ -140,7 +140,7 @@ const showAlert = (show = false, type="", msg = "")=> {
 const removeItem = (id) => {
   showAlert(true, "danger", "item removed");
   setList(list.filter((item) => item.id !== id));
-  clearList()
+  
 };
 
 const clearList = () => {
@@ -168,7 +168,7 @@ useEffect(() => {
            </div>
 
            <div className="box b">
-             <h1>Math Games</h1>
+             <h1>Busket</h1>
              <p>Instructions</p>
            </div>
 
@@ -210,7 +210,9 @@ useEffect(() => {
            <ShowItems bottomItems={bottomItems} handleClickedItems={handleClickedItems}/>
            </div>
 
-           <div className="box change d"></div>
+           <div className="box change d">
+             <button onClick = {() => {clearList()}}>Clear Busket</button>
+           </div>
 
 
          </div>

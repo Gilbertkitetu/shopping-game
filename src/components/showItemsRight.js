@@ -10,6 +10,7 @@ function ShowItemsRight (props){
 
  
 var handleClick = (item)  => {
+ 
   
   console.log(`Click happened at show-item-right: ${item}`);
   props.handleClickedItems(item);

@@ -2,7 +2,8 @@ import React from 'react'
 
 const CountDownTimer = ({remainingTime}) => {
     if(remainingTime === 0) {
-        return <div className="timer">Too late...</div>;
+        
+         <div className="timer" >Too late...</div>; alert('Time is up');
     }
    
     return (
