@@ -13,11 +13,16 @@ function Busket ({ items, removeItem }){
        
 
           <div className=''>
-            {items.map((item) => {
+            
+            {
+           
+            items.map((item) => {
               const { id, title } = item;
               return(
                 <div className="busket-item" key={id} onClick={()=> removeItem(id)}>
+                
                   <p>{title}</p>
+                  
                 
                 </div>
               );

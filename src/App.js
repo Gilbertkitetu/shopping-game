@@ -175,7 +175,7 @@ useEffect(() => {
            <div className="box c">
              <CountdownCircleTimer
              isPlaying
-             duration = {10}
+             duration = {40}
              colors = {[["#30b837", 0.33], ["#09302e", 0.33], ["#000000"]]}
              onComplete = {() => [true, 1000]}
              >
