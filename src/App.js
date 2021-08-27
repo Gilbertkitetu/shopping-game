@@ -49,6 +49,7 @@ function App() {
   const  [value,  setValue] = useState("");
   const [list, setList] = useState(getLocalStorage());
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
+  const [prev, setPrev] = useState(0);
 
 
 
@@ -85,11 +86,11 @@ var listOfItems = randomArrayShuffle(listOfItems1);
 
 
   //buttom boxes image values
-  var bottomItems = [];
-  for (let i = 0; i <= 9; i++){
+  var bottomItems = listOfItems.slice(0, 10);
+  // for (let i = 0; i <= 9; i++){
   
-    bottomItems.push(listOfItems[i]);
-  }
+  //   bottomItems.push(listOfItems[i]);
+  // }
 
  
 
@@ -98,19 +99,14 @@ var listOfItems = randomArrayShuffle(listOfItems1);
 
 
   //right boxes images value
-var rightItems = [];
-for (let i = 10; i <= 14; i++){
-rightItems.push(listOfItems[i]);
-}
+var rightItems = listOfItems.slice(10, 15);
+
 
 console.log(`Right items ${rightItems}`);
 
  
 //left boxes images values
-var leftItems = [];
-for(let i = 15; i <= 19; i++){
-  leftItems.push(listOfItems[i]);
-}
+var leftItems = listOfItems.slice(15, 20);
 
 console.log(`Left items ${leftItems}`);
 
@@ -123,7 +119,17 @@ var handleClickedItems = (item) => {
   
   if(!item){
     showAlert(true, "danger", "Nothing was Clicked");
-  }else{
+  } else{
+    console.log(`Previuly clicked item  ${prev}`);
+    //setPrev(item);
+    //console.log(`Assigned clicked item ${item}`);
+    
+    if(prev < item){
+      setPrev(item);
+      console.log("something fishy")
+    }else{
+      window.alert(`${item} is less than ${prev}`);
+    }
     showAlert(true, "success", "Something clicked");
     
     const newItem = { id: new Date().getTime().toString(), title: item };

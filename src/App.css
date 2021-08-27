@@ -40,6 +40,7 @@
   width: 90%;
   height: 100%;
   margin-left: 5%;
+  margin-top:2%;
  
   border-radius: 5px;
   display: grid;
@@ -54,13 +55,14 @@
   background-color: #30b837;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
+  padding: 5%;
   font-size: 150%;
   
   /* box-shadow: rgba(216, 24, 24, 0.56) 0px 22px 70px 4px; */
 }
 .change {
   background-color: #09302e;
+
 }
 .bottom {
   background-color: #09302e;

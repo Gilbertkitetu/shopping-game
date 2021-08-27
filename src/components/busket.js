@@ -6,7 +6,23 @@ import './styles/busket.css';
 
 function Busket ({ items, removeItem }){
 
+// function sortItems (items){
+//   var temp = 0;
+//   for(var i = 0; i < items.length; i++) {
+//     for(var j = 0; j < items[i].length; j++) {
+//       if (items[j] < items[i][i]) {
+//         temp = items[i][i];
+//         items[j] = items[i][i];
+//         items[i][i] = temp;
+//       }
+//     }
+//   }
+//   return items[0].title;
+// }
 
+// function sortItems (){
+//   items.sort(function(a, b){return a - b});
+// }
 
 
     return(
@@ -18,6 +34,9 @@ function Busket ({ items, removeItem }){
            
             items.map((item) => {
               const { id, title } = item;
+              console.log(`Items in the busket ${items[0].title}`);
+              // console.log(`Sort array ${sortItems(items)}`);
+
               return(
                 <div className="busket-item" key={id} onClick={()=> removeItem(id)}>
                 
