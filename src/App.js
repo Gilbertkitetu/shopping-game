@@ -128,16 +128,18 @@ var handleClickedItems = (item) => {
     
     if(prev < item){
       setPrev(item);
-      console.log("something fishy")
+      console.log("something fishy");
+
+      showAlert(true, "success", "Something clicked");
+    
+      const newItem = { id: new Date().getTime().toString(), title: item };
+  
+      setList([...list, newItem]);
+      setValue("");
     }else{
       showReactAlert.show(`.. ${item} is less than or equal to ${prev}`);
     }
-    showAlert(true, "success", "Something clicked");
-    
-    const newItem = { id: new Date().getTime().toString(), title: item };
-
-    setList([...list, newItem]);
-    setValue("");
+   
   }
 };
 
@@ -151,9 +153,14 @@ const removeItem = (id) => {
   
 };
 
+function refreshPage(){
+  window.location.reload();
+} 
+
 const clearList = () => {
   showAlert(true, "danger", "empty list");
   setList([]);
+  refreshPage();
 }
 
 useEffect(() => {
@@ -220,6 +227,7 @@ useEffect(() => {
 
            <div className="box change d">
              <button onClick = {() => {clearList()}}>Clear Busket</button>
+             <button style={{margin: '10px'}} onClick = {() => {clearList()}}>Restart</button>
            </div>
 
 
