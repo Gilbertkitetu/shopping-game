@@ -7,9 +7,13 @@ import React, { useState, useEffect } from 'react';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
+
+import { useAlert } from 'react-alert'
 //import background image
 //import blueCarbon from './backgrounds/blueCarbon.png';
 import busket from './images/basket/shoppingbag.png';
+
+
 
 
 
@@ -45,6 +49,7 @@ const getLocalStorage = () => {
 
 
 function App() {
+  const showReactAlert = useAlert();
 
   const  [value,  setValue] = useState("");
   const [list, setList] = useState(getLocalStorage());
@@ -52,9 +57,6 @@ function App() {
   const [prev, setPrev] = useState(0);
 
 
-
-  //countDownTimer variables
-  const hoursMinSecs = {hours:0, minutes: 0, seconds: 40}
 
 //loading images to array listOfItems
   var listOfItems1 = [];
@@ -128,7 +130,7 @@ var handleClickedItems = (item) => {
       setPrev(item);
       console.log("something fishy")
     }else{
-      window.alert(`${item} is less than ${prev}`);
+      showReactAlert.show(`.. ${item} is less than or equal to ${prev}`);
     }
     showAlert(true, "success", "Something clicked");
     
