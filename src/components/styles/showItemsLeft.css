@@ -1,7 +1,8 @@
 .item-left {
     width: 80px;
     height: 100px;
-    display: inline-block;
+    display: flex;
+	align-items: center;
 	position: relative;
 	vertical-align: top;
 	margin: 2px;

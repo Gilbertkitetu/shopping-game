@@ -1,7 +1,9 @@
 .item {
     width: 80px;
     height: 100px;
-    display: inline-block;
+    display: flex;
+	align-items: center;
+	justify-content: center;
 	position: relative;
 	vertical-align: top;
 	margin: 2px;
@@ -11,7 +13,6 @@
 	text-align: center;
     border-radius: 3px;
     cursor: pointer;
-	object-fit: cover;
   
 }
 

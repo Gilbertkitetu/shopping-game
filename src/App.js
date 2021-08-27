@@ -9,6 +9,8 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 
 import { useAlert } from 'react-alert'
+import Drawer from 'react-drag-drawer'
+
 //import background image
 //import blueCarbon from './backgrounds/blueCarbon.png';
 import busket from './images/basket/shoppingbag.png';
@@ -24,8 +26,10 @@ import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
 import CountDownTimer from './components/countDownTimer';
 import numbers from './components/numbers';
-import Popup from './components/popup';
+//import Popup from './components/popup';
 import Busket from './components/busket';
+import Result from './components/result';
+
 
 
 import './App.css';
@@ -55,6 +59,7 @@ function App() {
   const [list, setList] = useState(getLocalStorage());
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const [prev, setPrev] = useState(0);
+ // const [popUp, setPopUp] = useState(true);
 
 
 
@@ -126,7 +131,7 @@ var handleClickedItems = (item) => {
     //setPrev(item);
     //console.log(`Assigned clicked item ${item}`);
     
-    if(prev < item){
+    if(item === prev+1){
       setPrev(item);
       console.log("something fishy");
 
@@ -137,7 +142,7 @@ var handleClickedItems = (item) => {
       setList([...list, newItem]);
       setValue("");
     }else{
-      showReactAlert.show(`.. ${item} is less than or equal to ${prev}`);
+      showReactAlert.show(`... The next value should be: ${prev+1}`);
     }
    
   }
@@ -160,7 +165,7 @@ function refreshPage(){
 const clearList = () => {
   showAlert(true, "danger", "empty list");
   setList([]);
-  refreshPage();
+  
 }
 
 useEffect(() => {
@@ -180,6 +185,7 @@ useEffect(() => {
 
            <div className="box change a">
              <h2>Level : 1</h2>
+             <h2>Score: 10</h2>
            </div>
 
            <div className="box b">
@@ -190,7 +196,7 @@ useEffect(() => {
            <div className="box c">
              <CountdownCircleTimer
              isPlaying
-             duration = {40}
+             duration = {10}
              colors = {[["#30b837", 0.33], ["#09302e", 0.33], ["#000000"]]}
              onComplete = {() => [true, 1000]}
              >
@@ -227,7 +233,7 @@ useEffect(() => {
 
            <div className="box change d">
              <button onClick = {() => {clearList()}}>Clear Busket</button>
-             <button style={{margin: '10px'}} onClick = {() => {clearList()}}>Restart</button>
+             <button style={{margin: '10px'}} onClick = {() => {refreshPage()}}>Restart</button>
            </div>
 
 

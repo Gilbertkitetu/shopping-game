@@ -1,14 +1,14 @@
 import React from "react";
 
 
-function BusketBox (){
+function Result (){
 
 
     return(
         <div className="busket-kabox">
-            <h1>Kabox</h1>
+            <h1>RESULT</h1>
         </div>
     );
 }
 
-export default BusketBox;
+export default Result;
