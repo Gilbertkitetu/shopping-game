@@ -1,0 +1,17 @@
+.start-btn{
+
+  height: 200px;
+  
+  background-color: #30b837;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-btn h2{
+   
+    flex: 0 0 120px;
+}

@@ -28,7 +28,7 @@ import CountDownTimer from './components/countDownTimer';
 import numbers from './components/numbers';
 //import Popup from './components/popup';
 import Busket from './components/busket';
-import Result from './components/result';
+import Start from './components/start';
 
 
 
@@ -60,6 +60,7 @@ function App() {
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const [prev, setPrev] = useState(0);
  // const [popUp, setPopUp] = useState(true);
+ const [showStart, setShowStart] = useState(true);
 
 
 
@@ -159,12 +160,14 @@ const removeItem = (id) => {
 };
 
 function refreshPage(){
+  clearList()
   window.location.reload();
 } 
 
 const clearList = () => {
   showAlert(true, "danger", "empty list");
   setList([]);
+  window.location.reload();
   
 }
 
@@ -185,7 +188,7 @@ useEffect(() => {
 
            <div className="box change a">
              <h2>Level : 1</h2>
-             <h2>Score: 10</h2>
+             <h2>Score: </h2>
            </div>
 
            <div className="box b">
@@ -218,7 +221,7 @@ useEffect(() => {
              </div>
 
              <div className=" busket-items">
-                  <Busket items = {list} removeItem= {removeItem}/>
+                {showStart ? <Start/> :  <Busket items = {list} removeItem= {removeItem}/>}
              </div>
            </div>
 
