@@ -60,11 +60,20 @@ function App() {
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const [prev, setPrev] = useState(0);
  // const [popUp, setPopUp] = useState(true);
- const [showStart, setShowStart] = useState(false);
+ const [showStart, setShowStart] = useState(true);
+ const [seconds, setSeconds] = useState(0);
 
+//handle starting of the game
 
+function handleGameStart(){
+  setShowStart(false);
+  setSeconds(40);
+  
+  
+  
+}
 
-//loading images to array listOfItems
+//loading values to array listOfItems
   var listOfItems1 = [];
   
 for (let i = 0; i <= 19; i++){
@@ -136,7 +145,7 @@ var handleClickedItems = (item) => {
       setPrev(item);
       console.log("something fishy");
 
-      showAlert(true, "success", "Something clicked");
+      showAlert(true, "success", `${item} Clicked`);
     
       const newItem = { id: new Date().getTime().toString(), title: item };
   
@@ -154,7 +163,7 @@ const showAlert = (show = false, type="", msg = "")=> {
 };
 
 const removeItem = (id) => {
-  showAlert(true, "danger", "item removed");
+  showAlert(true, "danger", `Item Removed`);
   setList(list.filter((item) => item.id !== id));
   
 };
@@ -165,9 +174,9 @@ function refreshPage(){
 } 
 
 const clearList = () => {
-  showAlert(true, "danger", "empty list");
+  showAlert(true, "danger", "Empty Busket!!!");
   setList([]);
-  window.location.reload();
+  //window.location.reload();
   
 }
 
@@ -176,6 +185,7 @@ useEffect(() => {
 }, [list]);
 
 
+var t = 20;
   return (
     <div className="App">
 
@@ -199,14 +209,18 @@ useEffect(() => {
            </div>
 
            <div className="box c">
+             { showStart ? <h2>{seconds}</h2> :
              <CountdownCircleTimer
              isPlaying
-             duration = {10}
+            
+             duration = {t}
              colors = {[["#30b837", 0.33], ["#09302e", 0.33], ["#000000"]]}
-             onComplete = {() => [true, 1000]}
+             
              >
-               {CountDownTimer}
-             </CountdownCircleTimer>
+               {<CountDownTimer/>}
+             </CountdownCircleTimer> 
+           
+}
            </div>
 
 
@@ -223,7 +237,7 @@ useEffect(() => {
              </div>
 
              <div className=" busket-items">
-                {showStart ? <Start/> :  <Busket items = {list} removeItem= {removeItem}/>}
+                {showStart ? <Start handleGameStart= {handleGameStart}/> :  <Busket items = {list} removeItem= {removeItem}/>}
              </div>
            </div>
 

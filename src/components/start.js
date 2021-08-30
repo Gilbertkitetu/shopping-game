@@ -3,7 +3,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 import './styles/start.css';
 
-function Start (){
+function Start ({ handleGameStart }){
 
 
     return(
@@ -18,7 +18,7 @@ function Start (){
                 style={{ width: '100%', height: '200px' }}
                 >
                     <FrontSide style={{backgroundColor: '#175852',}}>
-                        <div className="start-btn"><h2>Start New Game</h2></div>
+                        <div className="start-btn" onClick={() => {handleGameStart()}}><h2>Start New Game</h2></div>
                     </FrontSide>
                     <BackSide style={{ backgroundColor: '#30'}}>
                         Let's Go
