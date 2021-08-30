@@ -26,7 +26,7 @@ import ShowItemsRight from './components/showItemsRight';
 import ShowItemsLeft from './components/showItemsLeft';
 import CountDownTimer from './components/countDownTimer';
 import numbers from './components/numbers';
-//import Popup from './components/popup';
+import Alert from './components/Alert';
 import Busket from './components/busket';
 import Start from './components/start';
 
@@ -60,7 +60,7 @@ function App() {
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
   const [prev, setPrev] = useState(0);
  // const [popUp, setPopUp] = useState(true);
- const [showStart, setShowStart] = useState(true);
+ const [showStart, setShowStart] = useState(false);
 
 
 
@@ -194,6 +194,8 @@ useEffect(() => {
            <div className="box b">
              <h1>Busket</h1>
              <p>Instructions</p>
+             <h4> {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
+</h4>
            </div>
 
            <div className="box c">
