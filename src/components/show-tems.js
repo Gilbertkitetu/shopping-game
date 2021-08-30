@@ -1,6 +1,6 @@
 import React from 'react';
 //import i2 from '../images/fruits/i11.jpg';
-
+import { useAlert } from 'react-alert'
 // import ShowItemsLeft from './showItemsLeft';
 // import ShowItemsRight from './showItemsRight';
 // import fruits from './fruit-images';
@@ -11,11 +11,22 @@ import './styles/show-item.css';
 
 
 function ShowItems (props){
+    const bottomAlert = useAlert();
 
 //props from app
 var bottomItems = props.bottomItems;
 
 console.log(`Buttom items are: ${bottomItems}`);
+
+function status(item){
+    if(!props.showStart){
+      handleClick(item)
+    }else{
+      bottomAlert.show('Sorry Ninja, Click Start New Game')
+    }
+   }
+  
+  
 
 var handleClick = (item)  => {
     console.log(`Click happened at show-item-button: ${item}`);
@@ -23,7 +34,7 @@ var handleClick = (item)  => {
 }
 
 var mappedBottomItems = bottomItems.map((item)=>
-<li className="item-bottom" key={item} onClick={() => handleClick(item)}>{item}</li>
+<li className="item-bottom" key={item} onClick={() => status(item)}>{item}</li>
 );
 
 

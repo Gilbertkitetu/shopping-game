@@ -9,7 +9,7 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 
 import { useAlert } from 'react-alert'
-import Drawer from 'react-drag-drawer'
+//import Drawer from 'react-drag-drawer'
 
 //import background image
 //import blueCarbon from './backgrounds/blueCarbon.png';
@@ -158,6 +158,7 @@ var handleClickedItems = (item) => {
   }
 };
 
+
 const showAlert = (show = false, type="", msg = "")=> {
   setAlert({ show, type, msg });
 };
@@ -203,7 +204,9 @@ var t = 20;
 
            <div className="box b">
              <h1>Busket</h1>
-             <p>Instructions</p>
+             <h4 style={{color: 'black'}}>Instructions</h4>
+             <p>Arrange the numbers on the Busket from 1 to 12</p>
+
              <h4> {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
 </h4>
            </div>
@@ -225,7 +228,7 @@ var t = 20;
 
 
            <div className="box show-items-left">
-             <ShowItemsLeft leftItems={leftItems} handleClickedItems={handleClickedItems}/>
+             <ShowItemsLeft leftItems={leftItems} handleClickedItems={handleClickedItems} showStart = {showStart}/>
           
            </div>
 
@@ -243,11 +246,11 @@ var t = 20;
 
 
            <div className="box bottom show-items-right">
-           <ShowItemsRight rightItems={rightItems} handleClickedItems={handleClickedItems}/>
+           <ShowItemsRight rightItems={rightItems} handleClickedItems={handleClickedItems} showStart = {showStart}/>
            </div>
 
            <div className="box bottom show-items-bottom">
-           <ShowItems bottomItems={bottomItems} handleClickedItems={handleClickedItems}/>
+           <ShowItems bottomItems={bottomItems} handleClickedItems={handleClickedItems} showStart = {showStart}/>
            </div>
 
            <div className="box change d">
