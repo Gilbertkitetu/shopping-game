@@ -1,7 +1,7 @@
 .item {
     width: 80px;
     height: 100px;
-    display: flex;
+    display: inline-block;
 	align-items: center;
 	justify-content: center;
 	position: relative;

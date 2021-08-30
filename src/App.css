@@ -131,6 +131,7 @@
 
 
 .show-items-left {
+  
   grid-column: col;
   grid-row: row 2;
 }
@@ -166,4 +167,7 @@
 .box button:hover {
   background-color: #30b83773;
   
+}
+p{
+  font-size: 17px;
 }
