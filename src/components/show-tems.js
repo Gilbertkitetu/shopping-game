@@ -34,7 +34,7 @@ var handleClick = (item)  => {
 }
 
 var mappedBottomItems = bottomItems.map((item)=>
-<li className="item-bottom" key={item} onClick={() => status(item)}>{item}</li>
+<li className="item-bottom" key={item} onClick={() => status(item)}><h3>{item}</h3></li>
 );
 
 

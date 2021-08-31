@@ -67,7 +67,7 @@ function App() {
 
 function handleGameStart(){
   setShowStart(false);
-  setSeconds(40);
+  //setSeconds(40);
   
   
   
@@ -212,12 +212,12 @@ var t = 20;
            </div>
 
            <div className="box c">
-             { showStart ? <h2>{seconds}</h2> :
+             { showStart ? <h2>CountDown</h2> :
              <CountdownCircleTimer
              isPlaying
             
              duration = {t}
-             colors = {[["#30b837", 0.33], ["#09302e", 0.33], ["#000000"]]}
+             colors = {[["#30b837", 0.33], ["#f67e7d", 0.33], ["#ed2939"]]}
              
              >
                {<CountDownTimer/>}

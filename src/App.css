@@ -76,6 +76,7 @@
   grid-row: row;
 }
 .c {
+  background-color: #09302e;
   grid-column: col 4;
   grid-row: row;
 }
