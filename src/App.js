@@ -63,6 +63,19 @@ function App() {
  // const [popUp, setPopUp] = useState(true);
  const [showStart, setShowStart] = useState(true);
  const [timerState, setTimerState] = useState(false);
+ const [score, setScore] = useState(0);
+
+
+//calculate score
+var calculateScore = (itemLength) => {
+   // var marks = itemLength;
+    setScore(itemLength * 10);
+    //console.log(`Scoreeeeeeeeeeeeee ${itemLength}`)
+}
+//winning
+if(score === 120){
+  showReactAlert.show('You Won!!!!')
+}
 
 //handle starting of the game
 function handleGameStart(){
@@ -200,7 +213,7 @@ useEffect(() => {
 }, [list]);
 
 
-var time = 25;
+var time = 40;
   return (
     <div className="App">
 
@@ -213,13 +226,13 @@ var time = 25;
 
            <div className="box change a">
              <h2>Level : 1</h2>
-             <h2>Score: </h2>
+             <h2>Score: {score}</h2>
            </div>
 
            <div className="box b">
-             <h1>Busket</h1>
+             <h1>The Busket Game</h1>
              <h4 style={{color: 'black'}}>Instructions</h4>
-             <p>Arrange the numbers on the Busket from 1 to 12</p>
+             <h6 style={{color: 'black'}}>Arrange the numbers in the Busket by Clicking from 1 to 12 within the Given time</h6>
 
              <h4> {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
 </h4>
@@ -255,7 +268,7 @@ var time = 25;
              </div>
 
              <div className=" busket-items">
-                {showStart ? <Start handleGameStart= {handleGameStart}/> :  <Busket items = {list} removeItem= {removeItem}/>}
+                {showStart ? <Start handleGameStart= {handleGameStart}/> :  <Busket items = {list} removeItem= {removeItem} calculateScore = {calculateScore}/>}
              </div>
            </div>
 
@@ -269,8 +282,8 @@ var time = 25;
            </div>
 
            <div className="box change d">
-             <button onClick = {() => {clearList()}}>Clear Busket</button>
-             <button style={{margin: '10px'}} onClick = {() => {refreshPage()}}>Restart</button>
+             <button onClick = {() => {clearList()}}>Clear The Busket</button>
+             <button style={{margin: '10px'}} onClick = {() => {refreshPage()}}>Restart The Game</button>
            </div>
 
 

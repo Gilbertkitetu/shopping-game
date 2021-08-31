@@ -4,7 +4,7 @@ import './styles/busket.css';
 //imports
 // import BusketBox from './busketBox';
 
-function Busket ({ items, removeItem }){
+function Busket ({ items, removeItem, calculateScore }){
 
 // function sortItems (items){
 //   var temp = 0;
@@ -34,7 +34,8 @@ function Busket ({ items, removeItem }){
            
             items.map((item) => {
               const { id, title } = item;
-              console.log(`Items in the busket ${items[0].title}`);
+              console.log(`Items in the busket ${items.length}`);
+              calculateScore (items.length);
               // console.log(`Sort array ${sortItems(items)}`);
 
               return(

@@ -12,6 +12,7 @@ var leftItems = props.leftItems;
 console.log(`Items on the left shall be: ${leftItems}`);
 
 function status(item){
+  
     if(!props.showStart){
       handleClick(item)
     }else{
@@ -28,7 +29,7 @@ var handleClick = (item)  => {
 
 
 var mappedLeftItems = leftItems.map((item)=>
-<li className="item-left" key={item} onClick={() => status(item)}><h3>{item}</h3></li>
+<li className="item-left" key={item} onClick={(e) =>  status(item)}><h3>{item}</h3></li>
 );
 
 
