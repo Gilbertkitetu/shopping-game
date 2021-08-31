@@ -1,11 +1,7 @@
-import logo from './logo.svg';
-
-
-
 
 import React, { useState, useEffect } from 'react';
 
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 import { useAlert } from 'react-alert'
