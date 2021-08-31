@@ -5,7 +5,7 @@ import React, {useState} from 'react'
 
 //import { useAlert } from 'react-alert';
 
-const CountDownTimer = ({remainingTime}) => {
+const CountDownTimer = ({remainingTime, setTimerState}) => {
 
 
 
@@ -13,11 +13,11 @@ const CountDownTimer = ({remainingTime}) => {
     if(remainingTime === 0) {
        //alertTimeOut.show('Time is Up');
     //  window.location.reload();
-       return <div className="timer" >Too Late</div>;
+    setTimerState(true);
+      return  <div className="timer" >Too Late</div>;
         
-
-   
-    
+    }else{
+        setTimerState(false);
     }
    
     return (

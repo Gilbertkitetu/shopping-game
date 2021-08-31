@@ -61,15 +61,27 @@ function App() {
   const [prev, setPrev] = useState(0);
  // const [popUp, setPopUp] = useState(true);
  const [showStart, setShowStart] = useState(true);
- const [seconds, setSeconds] = useState(0);
+ const [timerState, setTimerState] = useState(false);
 
 //handle starting of the game
-
 function handleGameStart(){
   setShowStart(false);
+  setList([]);
   //setSeconds(40);
+ 
+}
+
+//if time is up what do we do?????
+
+//sleep in the middle
+if(timerState){
   
-  
+  showReactAlert.show('Time is Up Restarting...');
+    //setTimerState(false);
+   // setList([]);
+   //handleGameStart();
+   setTimeout(() => {  window.location.reload(); }, 4000);
+   
   
 }
 
@@ -168,12 +180,6 @@ const removeItem = (id) => {
   setList(list.filter((item) => item.id !== id));
   
 };
-
-function refreshPage(){
-  clearList()
-  window.location.reload();
-} 
-
 const clearList = () => {
   showAlert(true, "danger", "Empty Busket!!!");
   setList([]);
@@ -181,12 +187,19 @@ const clearList = () => {
   
 }
 
+function refreshPage(){
+  clearList()
+  window.location.reload();
+} 
+
+
+
 useEffect(() => {
   localStorage.setItem("list", JSON.stringify(list));
 }, [list]);
 
 
-var t = 20;
+var time = 25;
   return (
     <div className="App">
 
@@ -216,11 +229,12 @@ var t = 20;
              <CountdownCircleTimer
              isPlaying
             
-             duration = {t}
+             duration = {time}
              colors = {[["#30b837", 0.33], ["#f67e7d", 0.33], ["#ed2939"]]}
              
              >
-               {<CountDownTimer/>}
+               {<CountDownTimer setTimerState={setTimerState}/> }
+              
              </CountdownCircleTimer> 
            
 }
