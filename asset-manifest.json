@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/busketgame/static/css/main.55c21322.chunk.css",
-    "main.js": "/busketgame/static/js/main.579d6b4b.chunk.js",
-    "main.js.map": "/busketgame/static/js/main.579d6b4b.chunk.js.map",
-    "runtime-main.js": "/busketgame/static/js/runtime-main.77f20932.js",
-    "runtime-main.js.map": "/busketgame/static/js/runtime-main.77f20932.js.map",
-    "static/js/2.daabf93d.chunk.js": "/busketgame/static/js/2.daabf93d.chunk.js",
-    "static/js/2.daabf93d.chunk.js.map": "/busketgame/static/js/2.daabf93d.chunk.js.map",
-    "static/js/3.3fb597a1.chunk.js": "/busketgame/static/js/3.3fb597a1.chunk.js",
-    "static/js/3.3fb597a1.chunk.js.map": "/busketgame/static/js/3.3fb597a1.chunk.js.map",
-    "index.html": "/busketgame/index.html",
-    "static/css/main.55c21322.chunk.css.map": "/busketgame/static/css/main.55c21322.chunk.css.map",
-    "static/js/2.daabf93d.chunk.js.LICENSE.txt": "/busketgame/static/js/2.daabf93d.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/busketgame/static/media/logo.6ce24c58.svg",
-    "static/media/shoppingbag.45b42f5a.png": "/busketgame/static/media/shoppingbag.45b42f5a.png"
+    "main.css": "/shopping-game/static/css/main.55c21322.chunk.css",
+    "main.js": "/shopping-game/static/js/main.579d6b4b.chunk.js",
+    "main.js.map": "/shopping-game/static/js/main.579d6b4b.chunk.js.map",
+    "runtime-main.js": "/shopping-game/static/js/runtime-main.da160fc9.js",
+    "runtime-main.js.map": "/shopping-game/static/js/runtime-main.da160fc9.js.map",
+    "static/js/2.daabf93d.chunk.js": "/shopping-game/static/js/2.daabf93d.chunk.js",
+    "static/js/2.daabf93d.chunk.js.map": "/shopping-game/static/js/2.daabf93d.chunk.js.map",
+    "static/js/3.3fb597a1.chunk.js": "/shopping-game/static/js/3.3fb597a1.chunk.js",
+    "static/js/3.3fb597a1.chunk.js.map": "/shopping-game/static/js/3.3fb597a1.chunk.js.map",
+    "index.html": "/shopping-game/index.html",
+    "static/css/main.55c21322.chunk.css.map": "/shopping-game/static/css/main.55c21322.chunk.css.map",
+    "static/js/2.daabf93d.chunk.js.LICENSE.txt": "/shopping-game/static/js/2.daabf93d.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/shopping-game/static/media/logo.6ce24c58.svg",
+    "static/media/shoppingbag.45b42f5a.png": "/shopping-game/static/media/shoppingbag.45b42f5a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.77f20932.js",
+    "static/js/runtime-main.da160fc9.js",
     "static/js/2.daabf93d.chunk.js",
     "static/css/main.55c21322.chunk.css",
     "static/js/main.579d6b4b.chunk.js"
