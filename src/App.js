@@ -29,6 +29,7 @@ import numbers from './components/numbers';
 import Alert from './components/Alert';
 import Busket from './components/busket';
 import Start from './components/start';
+import Clock from './components/clock';
 
 
 
@@ -225,7 +226,7 @@ var time = 25;
            </div>
 
            <div className="box c">
-             { showStart ? <h2>CountDown</h2> :
+             { showStart ? <Clock /> :
              <CountdownCircleTimer
              isPlaying
             

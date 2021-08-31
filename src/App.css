@@ -172,3 +172,103 @@
 p{
   font-size: 17px;
 }
+
+
+#clock {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out; 
+  user-select: none;
+  cursor: pointer;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  &:hover {
+    background: $clock-hover;
+  }
+  #info {
+    width: 100%;
+    #time { 
+      font-size: 6em; 
+      display: inline-block;
+    }
+    #date {
+      margin-top: 1.8em;
+      margin-bottom: 0.2em;
+      font-size: 2em; 
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+#controls {
+  #slider {
+    display: block;
+    cursor: pointer;
+    width: $switch-size*4;
+    height: $switch-size*3;
+    transition: $switch-transition;
+    position: relative;
+    div {
+      position: absolute;
+      content: "";
+      height: $switch-size;
+      width: $switch-size;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: $switch-transition;
+    }
+    #slider2 {
+      -webkit-transform: translateX($switch-distance);
+      -ms-transform: translateX($switch-distance);
+      transform: translateX($switch-distance);
+    }
+  }
+}
+
+.fade {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 750px) {
+  #clock {
+    #info {
+      #time {
+        font-size: 4.5em; 
+      }
+      #date {
+        font-size: 1.5em; 
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #clock {
+    #info {
+      #time {
+        font-size: 3em; 
+      }
+      #date {
+        font-size: 1em; 
+      }
+    }
+  }
+}
