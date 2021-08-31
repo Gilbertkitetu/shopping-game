@@ -1,6 +1,6 @@
 {
-  "homepage": "http://Gilbertkitetu.github.io/shopping-game",
-  "name": "puzzle",
+  "homepage": "http://Gilbertkitetu.github.io/busketgame",
+  "name": "busket",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
