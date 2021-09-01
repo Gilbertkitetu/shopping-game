@@ -53,3 +53,10 @@
             
 }
   
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.item-left {
+		width: 50px;
+		height: 50px;
+	}
+}

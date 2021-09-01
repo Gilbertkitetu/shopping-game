@@ -273,3 +273,135 @@ p{
     }
   }
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+  .App{
+    object-fit: cover;
+  }
+ 
+  p{
+    font-size: 9px;
+    font-family: 'helvetica', san-serif;
+  }
+  .game-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 2px;
+    display: grid;
+  grid-template-columns: repeat(auto-fill, [col] 25%);
+  grid-template-rows: repeat(auto-fill, [row] auto-fill  );
+  grid-gap: 5px;
+  }
+  .header h1{
+    font-size: 1em;
+    width: 50px;
+    overflow: show;
+    font-size: 1em;
+  }
+  .box{
+    border-radius: 3px;
+    font-size: 80%;
+  }
+.box button{
+  width: 70px;
+  height: 30px;
+  font-size: 9px;
+}
+ h4{
+  font-size: 12px;
+}
+ h6 {
+  font-size: 9px;
+}
+.a {
+  grid-column: col;
+  grid-row: row span 1;
+}
+.b{
+  grid-column: col 2 / span 2;
+  grid-row: row span 1;
+}
+.c {
+  background-color: #09302e;
+  grid-column: col 4;
+  grid-row: row span 1;
+  position: relative;
+  width: 100px;
+        height: 150px;
+
+}
+.busket-container{
+  grid-column: col 2 /span 2;
+  grid-row: row 3 span 2 ;
+  
+}
+.busket-container .busket-image img{
+  grid-column: col 3 /span 3;
+  grid-row: row 2;
+}
+
+.busket-items{
+  
+  grid-column: col 3 /span 2;
+  grid-row: row 2 ;
+}
+.show-items-left {
+  
+  grid-column: col ;
+  grid-row: row 3 span 4;
+}
+.show-items-right{
+
+
+  grid-column: col 4 ;
+  grid-row: row 3 span 4;
+}
+
+.show-items-bottom{
+  grid-column: col / span 3;
+    grid-row: row 7;
+    
+}
+
+.d {
+  grid-column: col 4;
+  grid-row: row 7;
+}
+.timer{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+  
+  }
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ 
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

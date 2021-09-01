@@ -249,16 +249,16 @@ var time = 40;
 </h4>
            </div>
 
-           <div className="box c">
+           <div className="box c" >
              { showStart ? <Clock /> :
-             <CountdownCircleTimer
+             <CountdownCircleTimer className="box c timer"
              isPlaying
             
              duration = {time}
              colors = {[["#30b837", 0.33], ["#f67e7d", 0.33], ["#ed2939"]]}
              
              >
-               {<CountDownTimer setTimerState={setTimerState}/> }
+               {<CountDownTimer setTimerState={setTimerState} className="box c"/> }
               
              </CountdownCircleTimer> 
            

@@ -60,4 +60,9 @@
         
 }
   
-
+@media only screen and (max-width: 600px) {
+	.item-bottom {
+		width: 30px;
+		height: 30px;
+	}
+}
