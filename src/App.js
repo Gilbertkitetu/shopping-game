@@ -5,12 +5,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 import { useAlert } from 'react-alert'
-//import Drawer from 'react-drag-drawer'
+//import Drawer from 'react-drag-drawer'import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 //import background image
 //import blueCarbon from './backgrounds/blueCarbon.png';
 import busket from './images/basket/shoppingbag.png';
-
 
 
 
@@ -26,8 +26,9 @@ import Alert from './components/Alert';
 import Busket from './components/busket';
 import Start from './components/start';
 import Clock from './components/clock';
-
-
+//import Login from './components/login';
+//import UserProvider from './components/UserProvider';
+//import { auth } from './components/firebase';
 
 import './App.css';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
@@ -60,6 +61,8 @@ function App() {
  const [showStart, setShowStart] = useState(true);
  const [timerState, setTimerState] = useState(false);
  const [score, setScore] = useState(0);
+
+
 
 
 //calculate score
@@ -210,7 +213,11 @@ useEffect(() => {
 
 
 var time = 40;
+
+
   return (
+
+
     <div className="App">
 
 
@@ -223,12 +230,20 @@ var time = 40;
            <div className="box change a">
              <h2>Level : 1</h2>
              <h2>Score: {score}</h2>
+
+
+               {/* <button>Login In</button>
+               */}
+           
+
+
            </div>
 
            <div className="box b">
              <h1>The Busket Game</h1>
              <h4 style={{color: 'black'}}>Instructions</h4>
              <h6 style={{color: 'black'}}>Arrange the numbers in the Busket by Clicking from 1 to 12 within the Given time</h6>
+             
 
              <h4> {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
 </h4>
@@ -287,6 +302,8 @@ var time = 40;
        </div>
        </BrowserRouter>
     </div>
+
+  
   );
 }
 
