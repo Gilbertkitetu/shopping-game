@@ -164,6 +164,7 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  font-size: 9px;
 }
 .box button:hover {
   background-color: #30b83773;
