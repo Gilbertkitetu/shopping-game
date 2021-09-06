@@ -240,9 +240,9 @@ var time = 40;
            </div>
 
            <div className="box b">
-             <h1>The Busket Game</h1>
+             <h1>The Basket Game</h1>
              <h4 style={{color: 'black'}}>Instructions</h4>
-             <h6 style={{color: 'black'}}>Arrange the numbers in the Busket by Clicking from 1 to 12 within the Given time</h6>
+             <h6 style={{color: 'black'}}>Arrange the numbers in the Basket by Clicking from 1 to 12 within the Given time</h6>
              
 
              <h4> {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
@@ -293,7 +293,7 @@ var time = 40;
            </div>
 
            <div className="box change d">
-             <button onClick = {() => {clearList()}}>Clear The Busket</button>
+             <button onClick = {() => {clearList()}}>Clear The Basket</button>
              <button style={{margin: '10px'}} onClick = {() => {refreshPage()}}>Restart The Game</button>
            </div>
 
